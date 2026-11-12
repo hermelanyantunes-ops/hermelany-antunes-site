@@ -1,0 +1,45 @@
+{
+  "_leia": "Edite os campos abaixo para atualizar os contatos do site. Campos vazios (\"\") ficam ocultos no site. Depois de salvar, publique novamente (veja o README).",
+
+  "siteUrl": "https://hermelany-antunes.web.app",
+
+  "nome": "Hermelany Antunes",
+  "nomeCompleto": "Hermelany Maria Luna Antunes",
+  "profissao": "Psicóloga",
+  "crp": "CRP 02/26332",
+  "cidade": "Recife",
+  "uf": "PE",
+
+  "email": "hermelanyantunes@gmail.com",
+
+  "whatsapp": "",
+  "_whatsapp_exemplo": "Somente números, com DDI 55 e DDD. Exemplo: 5581999999999",
+
+  "instagram": "",
+  "_instagram_exemplo": "Somente o nome de usuário, sem @. Exemplo: hermelanyantunes.psi",
+
+  "enderecoPresencial": "",
+  "_endereco_exemplo": "Exemplo: Rua Exemplo, 123, sala 45 — Boa Viagem, Recife/PE",
+  "linkMapa": "",
+
+  "horarioAtendimento": "",
+  "_horario_exemplo": "Exemplo: Segunda a sexta, das 8h às 18h",
+
+  "foto": "",
+  "_foto_exemplo": "Coloque a foto em src/assets/img/ e informe o nome do arquivo. Exemplo: hermelany.jpg",
+
+  "mensagensWhatsApp": {
+    "paciente": "Olá, Hermelany! Vim pelo site e gostaria de informações sobre a avaliação neuropsicológica.",
+    "profissional": "Olá, Hermelany! Sou profissional de saúde e gostaria de conversar sobre o encaminhamento de um paciente para avaliação neuropsicológica.",
+    "atendimento": "Olá, Hermelany! Vim pelo site e gostaria de informações sobre o atendimento psicológico.",
+    "geral": "Olá, Hermelany! Vim pelo site e gostaria de mais informações."
+  },
+
+  "supabaseUrl": "https://hpjnthwubydqrbdncapf.supabase.co",
+  "supabasePublishableKey": "sb_publishable_yPhTvW_i1oaIEG5WZ9Wsow_R4vCUfwh",
+
+  "googleAnalyticsId": "",
+  "_ga_exemplo": "Opcional. Exemplo: G-XXXXXXXXXX (ative somente depois de revisar a Política de Privacidade)",
+  "googleSiteVerification": "",
+  "_gsc_exemplo": "Opcional. Código da meta tag do Google Search Console (somente o valor de content)"
+}

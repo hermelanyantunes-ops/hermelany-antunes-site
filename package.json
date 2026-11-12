@@ -1,0 +1,13 @@
+{
+  "name": "hermelany-antunes-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site profissional de Hermelany Antunes, psicóloga — avaliação neuropsicológica e agenda online",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && npx --yes serve dist -l 8080",
+    "deploy": "npx --yes firebase-tools deploy --only hosting"
+  },
+  "engines": { "node": ">=18" }
+}

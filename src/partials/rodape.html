@@ -1,0 +1,35 @@
+<footer class="rodape">
+  <div class="envoltorio">
+    <div class="rodape-grade">
+      <div>
+        <p class="marca-nome">{{site.nomeCompleto}}</p>
+        <p>{{site.profissao}} &nbsp;{{site.crp}}<br>Avaliação neuropsicológica e atendimento psicológico, presencial em {{site.cidade}} e online.</p>
+      </div>
+      <div>
+        <h2>Navegação</h2>
+        <ul>
+          <li><a href="/sobre/">Quem sou</a></li>
+          <li><a href="/avaliacao-neuropsicologica/">Avaliação neuropsicológica</a></li>
+          <li><a href="/indicacoes/">Quando é indicada</a></li>
+          <li><a href="/relatorio-neuropsicologico/">Relatório neuropsicológico</a></li>
+          <li><a href="/atendimento-psicologico/">Atendimento psicológico</a></li>
+          <li><a href="/para-profissionais-de-saude/">Para profissionais de saúde</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contato</h2>
+        <ul>
+          <li><a href="/agendar/">Agendar horário</a></li>
+          {{#if links.temWhatsapp}}<li><a href="{{{links.waGeral}}}" target="_blank" rel="noopener">WhatsApp</a></li>{{/if}}
+          <li><a href="mailto:{{site.email}}">{{site.email}}</a></li>
+          {{#if site.instagram}}<li><a href="{{{links.instagram}}}" target="_blank" rel="noopener">Instagram @{{site.instagram}}</a></li>{{/if}}
+          <li><a href="/politica-de-privacidade/">Política de privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <p>As informações deste site têm caráter informativo e não substituem avaliação profissional individualizada. Em situações de urgência ou emergência em saúde mental, procure o serviço de saúde mais próximo, ligue 192 (SAMU) ou 188 (CVV).</p>
+      <p>© {{build.ano}} {{site.nomeCompleto}}</p>
+    </div>
+  </div>
+</footer>

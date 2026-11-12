@@ -1,0 +1,91 @@
+<!--{
+  "path": "/admin/",
+  "title": "Painel da agenda | Hermelany Antunes",
+  "description": "Área administrativa restrita.",
+  "noindex": true,
+  "layout": false
+}--><!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Painel da agenda | {{site.nome}}</title>
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/main.css?v={{build.v}}">
+<link rel="stylesheet" href="/assets/css/agenda.css?v={{build.v}}">
+<link rel="stylesheet" href="/assets/css/admin.css?v={{build.v}}">
+</head>
+<body class="admin">
+
+<!-- Entrada -->
+<section class="adm-entrada" id="v-entrar" hidden>
+  <div class="adm-cartao">
+    <p class="marca-nome">{{site.nome}}</p>
+    <h1>Painel da agenda</h1>
+    <form id="f-entrar" novalidate>
+      <div class="campo"><label for="e-email">E-mail</label><input id="e-email" type="email" autocomplete="username" required></div>
+      <div class="campo"><label for="e-senha">Senha</label><input id="e-senha" type="password" autocomplete="current-password" required></div>
+      <div class="erro-form" id="e-erro" role="alert" hidden></div>
+      <button class="botao botao-primario" type="submit">Entrar</button>
+      <button class="adm-link" type="button" id="b-esqueci">Esqueci minha senha</button>
+    </form>
+    <p class="nota">Use o mesmo e-mail e senha da sua conta já cadastrada. Acesso restrito a usuários autorizados.</p>
+  </div>
+</section>
+
+<!-- Nova senha (link de recuperação) -->
+<section class="adm-entrada" id="v-senha" hidden>
+  <div class="adm-cartao">
+    <h1>Definir nova senha</h1>
+    <form id="f-senha" novalidate>
+      <div class="campo"><label for="s-nova">Nova senha</label><input id="s-nova" type="password" autocomplete="new-password" minlength="8" required></div>
+      <div class="erro-form" id="s-erro" role="alert" hidden></div>
+      <button class="botao botao-primario" type="submit">Salvar senha</button>
+    </form>
+  </div>
+</section>
+
+<!-- Painel -->
+<div class="adm" id="v-painel" hidden>
+  <header class="adm-topo">
+    <div>
+      <p class="marca-nome">Painel da agenda</p>
+      <p class="nota" id="adm-usuario"></p>
+    </div>
+    <div class="grupo-botoes">
+      <a class="botao botao-secundario botao-pequeno" href="/" target="_blank" rel="noopener">Ver site</a>
+      <button class="botao botao-secundario botao-pequeno" type="button" id="b-sair">Sair</button>
+    </div>
+  </header>
+
+  <nav class="adm-abas" role="tablist" aria-label="Seções do painel">
+    <button role="tab" data-aba="agenda" aria-selected="true">Agenda</button>
+    <button role="tab" data-aba="lista" aria-selected="false">Agendamentos</button>
+    <button role="tab" data-aba="disponibilidade" aria-selected="false">Disponibilidade</button>
+    <button role="tab" data-aba="bloqueios" aria-selected="false">Bloqueios e férias</button>
+    <button role="tab" data-aba="tipos" aria-selected="false">Tipos de atendimento</button>
+    <button role="tab" data-aba="config" aria-selected="false">Configurações</button>
+    <button role="tab" data-aba="integracoes" aria-selected="false">Google Agenda e e-mail</button>
+  </nav>
+
+  <main class="adm-conteudo" id="adm-conteudo">
+    <p class="carregando">Carregando…</p>
+  </main>
+  <div class="adm-aviso" id="adm-aviso" role="status" aria-live="polite" hidden></div>
+</div>
+
+<dialog class="adm-modal" id="modal">
+  <form id="modal-form" novalidate>
+    <header><h2 id="modal-titulo"></h2><button class="adm-fechar" type="button" data-fechar aria-label="Fechar">×</button></header>
+    <div id="modal-corpo"></div>
+    <div class="erro-form" id="modal-erro" role="alert" hidden></div>
+    <footer id="modal-rodape"></footer>
+  </form>
+</dialog>
+
+<script src="/assets/js/config.js?v={{build.v}}"></script>
+<script type="module" src="/assets/js/admin.js?v={{build.v}}"></script>
+</body>
+</html>

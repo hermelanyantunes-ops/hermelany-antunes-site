@@ -1,0 +1,114 @@
+<!--{
+  "path": "/agendar/",
+  "title": "Agendar horário | Agenda online de Hermelany Antunes, psicóloga",
+  "description": "Consulte os horários disponíveis e agende avaliação neuropsicológica ou atendimento psicológico, presencial em Recife ou online, sem precisar criar conta.",
+  "nav": "",
+  "breadcrumb": "Agendar horário",
+  "priority": "0.9",
+  "agenda": true,
+  "script": "agenda.js"
+}-->
+<header class="pagina-topo">
+  <div class="envoltorio">
+    <nav class="migalhas" aria-label="Você está em"><ol><li><a href="/">Início</a></li><li aria-current="page">Agendar horário</li></ol></nav>
+    <h1>Agendar horário</h1>
+    <p class="lead">Escolha o tipo de atendimento, a modalidade e um horário disponível. Leva cerca de dois minutos e não é preciso criar conta.</p>
+  </div>
+</header>
+
+<section class="secao agenda-secao">
+  <div class="envoltorio">
+    <noscript><p class="aviso">Para usar a agenda online, ative o JavaScript do navegador ou entre em contato pelo e-mail <a href="mailto:{{site.email}}">{{site.email}}</a>.</p></noscript>
+
+    <div class="agenda-grade" id="agenda-app" data-estado="carregando">
+      <form class="agenda-form" id="agenda-form" novalidate>
+        <fieldset class="passo" id="passo-tipo">
+          <legend><span class="passo-num">1</span>Tipo de atendimento</legend>
+          <div class="opcoes" id="lista-tipos" role="radiogroup" aria-label="Tipo de atendimento">
+            <p class="carregando">Carregando opções…</p>
+          </div>
+        </fieldset>
+
+        <fieldset class="passo" id="passo-modalidade" disabled>
+          <legend><span class="passo-num">2</span>Modalidade</legend>
+          <div class="opcoes opcoes-lado" role="radiogroup" aria-label="Modalidade">
+            <label class="opcao"><input type="radio" name="modalidade" value="presencial"><span class="opcao-corpo"><span class="opcao-titulo">Presencial</span><span class="opcao-desc">No consultório, em {{site.cidade}}</span></span></label>
+            <label class="opcao"><input type="radio" name="modalidade" value="online"><span class="opcao-corpo"><span class="opcao-titulo">Online</span><span class="opcao-desc">Por videochamada</span></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="passo" id="passo-data" disabled>
+          <legend><span class="passo-num">3</span>Data e horário</legend>
+          <div class="cal-barra">
+            <div class="cal-nav">
+              <button type="button" class="cal-seta" id="cal-ant" aria-label="Período anterior"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+              <p class="cal-titulo" id="cal-titulo" aria-live="polite"></p>
+              <button type="button" class="cal-seta" id="cal-prox" aria-label="Próximo período"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+            </div>
+            <div class="alternador" role="group" aria-label="Visualização">
+              <button type="button" data-vista="mes" aria-pressed="true">Mês</button>
+              <button type="button" data-vista="semana" aria-pressed="false">Semana</button>
+            </div>
+          </div>
+          <div class="cal-corpo" id="cal-corpo" aria-busy="false"></div>
+          <ul class="legenda" aria-label="Legenda">
+            <li><span class="marca-leg leg-disp"></span>Com horários disponíveis</li>
+            <li><span class="marca-leg leg-res"></span>Horários reservados</li>
+            <li><span class="marca-leg leg-ind"></span>Indisponível</li>
+          </ul>
+          <div class="horarios" id="horarios" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset class="passo" id="passo-dados" disabled>
+          <legend><span class="passo-num">4</span>Seus dados</legend>
+          <p class="resumo-movel" id="resumo-movel" aria-live="polite"></p>
+          <div class="campos">
+            <div class="campo campo-largo">
+              <label for="f-nome">Nome completo</label>
+              <input id="f-nome" name="nome" type="text" autocomplete="name" required minlength="3" maxlength="120">
+            </div>
+            <div class="campo">
+              <label for="f-email">E-mail</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="160">
+            </div>
+            <div class="campo">
+              <label for="f-tel">Telefone / WhatsApp</label>
+              <input id="f-tel" name="telefone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="(81) 90000-0000" maxlength="20">
+            </div>
+            <div class="campo campo-largo">
+              <label for="f-obs">Observações administrativas <span class="opcional">(opcional)</span></label>
+              <textarea id="f-obs" name="obs" rows="3" maxlength="400" aria-describedby="f-obs-ajuda"></textarea>
+              <p class="ajuda" id="f-obs-ajuda">Por exemplo: agendamento para filho(a), preferência de contato ou necessidade de acessibilidade. Não inclua informações clínicas, diagnósticos ou relatos de saúde.</p>
+            </div>
+            <div class="campo-hp" aria-hidden="true">
+              <label for="f-site">Não preencha</label>
+              <input id="f-site" name="site" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <label class="consentimento campo-largo">
+              <input type="checkbox" name="consentimento" id="f-consent" required>
+              <span>Concordo com o uso destes dados para o agendamento, conforme a <a href="/politica-de-privacidade/" target="_blank">Política de Privacidade</a>.</span>
+            </label>
+          </div>
+          <div class="erro-form" id="erro-form" role="alert" hidden></div>
+          <button class="botao botao-primario botao-enviar" type="submit" id="btn-enviar">Confirmar agendamento</button>
+        </fieldset>
+      </form>
+
+      <aside class="resumo" aria-labelledby="resumo-titulo">
+        <div class="resumo-caixa">
+          <h2 id="resumo-titulo">Resumo</h2>
+          <dl class="resumo-lista">
+            <div><dt>Atendimento</dt><dd id="r-tipo">Não escolhido</dd></div>
+            <div><dt>Modalidade</dt><dd id="r-modalidade">Não escolhida</dd></div>
+            <div><dt>Data</dt><dd id="r-data">Não escolhida</dd></div>
+            <div><dt>Horário</dt><dd id="r-hora">Não escolhido</dd></div>
+          </dl>
+          <p class="nota">Horários no fuso de {{site.cidade}} (UTC−3). O horário só fica reservado depois que a confirmação aparece na tela.</p>
+        </div>
+        <p class="nota resumo-ajuda">Prefere conversar antes? <a href="{{{links.waPaciente}}}" {{{links.waAttrs}}}>{{links.canalRotulo}}</a></p>
+      </aside>
+
+      <div class="confirmacao" id="confirmacao" hidden tabindex="-1"></div>
+    </div>
+  </div>
+</section>

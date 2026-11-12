@@ -1,0 +1,41 @@
+<!--{
+  "path": "/contato/",
+  "title": "Contato e agendamento | Hermelany Antunes, psicóloga em Recife",
+  "description": "Agende avaliação neuropsicológica ou atendimento psicológico, presencial em Recife ou online. Contato por WhatsApp, e-mail e agenda online.",
+  "nav": "contato",
+  "breadcrumb": "Contato",
+  "priority": "0.8"
+}-->
+<header class="pagina-topo">
+  <div class="envoltorio">
+    <nav class="migalhas" aria-label="Você está em"><ol><li><a href="/">Início</a></li><li aria-current="page">Contato</li></ol></nav>
+    <h1>Contato e agendamento</h1>
+    <p class="lead">Você pode consultar os horários e agendar diretamente pela agenda online ou, se preferir, falar comigo antes.</p>
+  </div>
+</header>
+
+<section class="secao">
+  <div class="envoltorio duas-colunas">
+    <div>
+      <h2>Canais</h2>
+      <div class="grupo-botoes">
+        <a class="botao botao-primario" href="/agendar/">Agendar pela agenda online</a>
+      </div>
+    </div>
+    <div>
+      <ul class="contatos">
+        {{#if links.temWhatsapp}}<li><span class="rot">WhatsApp</span><span class="val"><a href="{{{links.waGeral}}}" target="_blank" rel="noopener">{{links.whatsappFormatado}}</a></span></li>{{/if}}
+        <li><span class="rot">E-mail</span><span class="val"><a href="mailto:{{site.email}}">{{site.email}}</a></span></li>
+        {{#if site.instagram}}<li><span class="rot">Instagram</span><span class="val"><a href="{{{links.instagram}}}" target="_blank" rel="noopener">@{{site.instagram}}</a></span></li>{{/if}}
+        <li><span class="rot">Atendimento presencial</span><span class="val">{{#if site.enderecoPresencial}}{{site.enderecoPresencial}}{{#if site.linkMapa}}<br><a class="nota" href="{{{site.linkMapa}}}" target="_blank" rel="noopener">Ver no mapa</a>{{/if}}{{else}}{{site.cidade}} ({{site.uf}}). O endereço é informado na confirmação do agendamento.{{/if}}</span></li>
+        <li><span class="rot">Atendimento online</span><span class="val">Por videochamada, para pessoas em qualquer cidade.</span></li>
+        {{#if site.horarioAtendimento}}<li><span class="rot">Horários</span><span class="val">{{site.horarioAtendimento}}</span></li>{{/if}}
+      </ul>
+      <div class="grupo-botoes mt-2">
+        <a class="botao botao-secundario" href="{{{links.waPaciente}}}" {{{links.waAttrs}}}>Sou paciente ou familiar</a>
+        <a class="botao botao-secundario" href="{{{links.waProfissional}}}" {{{links.waAttrs}}}>Sou profissional de saúde</a>
+      </div>
+      <p class="nota mt-15">Por segurança e sigilo, evite enviar informações clínicas detalhadas por mensagem. Esses dados são tratados na entrevista inicial.</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{page.title}}</title>
+<meta name="description" content="{{page.description}}">
+{{#if page.noindex}}<meta name="robots" content="noindex, nofollow">{{else}}<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="{{page.url}}">{{/if}}
+<meta name="theme-color" content="#1E3B32">
+<meta name="author" content="{{site.nomeCompleto}}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="{{site.nome}} — {{site.profissao}}">
+<meta property="og:title" content="{{page.title}}">
+<meta property="og:description" content="{{page.description}}">
+<meta property="og:url" content="{{page.url}}">
+<meta property="og:image" content="{{site.siteUrl}}/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+{{#if site.googleSiteVerification}}<meta name="google-site-verification" content="{{site.googleSiteVerification}}">{{/if}}
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/main.css?v={{build.v}}">
+{{#if page.agenda}}<link rel="stylesheet" href="/assets/css/agenda.css?v={{build.v}}">{{/if}}
+<script type="application/ld+json">{{{page.jsonld}}}</script>
+{{#if site.googleAnalyticsId}}<script async src="/assets/js/analytics.js?v={{build.v}}" data-ga="{{site.googleAnalyticsId}}"></script>{{/if}}
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+{{> cabecalho}}
+<main id="conteudo" tabindex="-1">
+{{{content}}}
+</main>
+{{> rodape}}
+{{#unless page.semFlutuante}}<a class="flutuante" href="{{{links.waGeral}}}" {{{links.waAttrs}}}>{{> icone-mensagem}}<span class="rotulo">{{#if links.temWhatsapp}}WhatsApp{{else}}Fale comigo{{/if}}</span></a>{{/unless}}
+<script src="/assets/js/config.js?v={{build.v}}"></script>
+<script src="/assets/js/main.js?v={{build.v}}" defer></script>
+{{#if page.script}}<script type="module" src="/assets/js/{{page.script}}?v={{build.v}}"></script>{{/if}}
+</body>
+</html>

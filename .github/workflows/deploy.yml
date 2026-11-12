@@ -1,0 +1,42 @@
+# Publica o site no Firebase Hosting a cada alteração na branch main.
+# Requer o segredo FIREBASE_SERVICE_ACCOUNT no repositório
+# (criado automaticamente por: npx firebase-tools init hosting:github).
+name: Publicar no Firebase Hosting
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    env:
+      TEM_SEGREDO: ${{ secrets.FIREBASE_SERVICE_ACCOUNT != '' && 'sim' || 'nao' }}
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Gerar site
+        run: node scripts/build.mjs
+      - name: Publicar (produção)
+        if: github.event_name != 'pull_request' && env.TEM_SEGREDO == 'sim'
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          channelId: live
+          projectId: hermelany-antunes
+      - name: Prévia (pull request)
+        if: github.event_name == 'pull_request' && env.TEM_SEGREDO == 'sim'
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: hermelany-antunes
