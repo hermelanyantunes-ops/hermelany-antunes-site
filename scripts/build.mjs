@@ -22,6 +22,7 @@ const OUT = join(ROOT, 'dist');
 const site = JSON.parse(readFileSync(join(SRC, 'config/site.json'), 'utf8'));
 for (const k of Object.keys(site)) if (k.startsWith('_')) delete site[k];
 site.siteUrl = site.siteUrl.replace(/\/$/, '');
+site.tema = site.tema === 'verde' ? 'verde' : 'vinho';
 
 // ---------------------------------------------------------------------
 // Utilidades
@@ -66,6 +67,8 @@ const wa = (texto, assunto) => temWhatsapp
 
 const links = {
   temWhatsapp,
+  heroImg: site.fotoHero || 'hero-abstrato.jpg',
+  corTema: site.tema === 'verde' ? '#1E3B32' : '#4A1C29',
   waAttrs: temWhatsapp ? 'target="_blank" rel="noopener"' : '',
   waPaciente: wa(msg.paciente, 'Avaliação neuropsicológica'),
   waProfissional: wa(msg.profissional, 'Encaminhamento para avaliação neuropsicológica'),

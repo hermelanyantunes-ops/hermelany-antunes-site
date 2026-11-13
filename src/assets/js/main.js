@@ -19,7 +19,7 @@
     });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') fechar(); });
     painel.addEventListener('click', (e) => { if (e.target.closest('a')) fechar(); });
-    window.matchMedia('(min-width: 1061px)').addEventListener('change', fechar);
+    window.matchMedia('(min-width: 1181px)').addEventListener('change', fechar);
   }
 
   if (topo) {

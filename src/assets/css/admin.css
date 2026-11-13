@@ -14,8 +14,8 @@ body.admin { background: #F5F4EF; font-size: 1rem; }
 .adm { min-height: 100svh; display: flex; flex-direction: column; }
 .adm-topo { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem clamp(1rem, 3vw, 2rem); background: var(--verde); color: var(--claro-sobre-verde); }
 .adm-topo .marca-nome { color: #fff; margin: 0; font-size: 1.3rem; }
-.adm-topo .nota { margin: 0; color: rgba(233, 226, 210, .75); font-size: var(--t-xs); }
-.adm-topo .botao-secundario { color: var(--claro-sobre-verde); border-color: rgba(233, 226, 210, .4); }
+.adm-topo .nota { margin: 0; color: rgba(var(--c-rgb), .75); font-size: var(--t-xs); }
+.adm-topo .botao-secundario { color: var(--claro-sobre-verde); border-color: rgba(var(--c-rgb), .4); }
 .adm-topo .botao-secundario:hover { background: rgba(255, 255, 255, .08); color: #fff; }
 .adm-abas { display: flex; gap: .25rem; overflow-x: auto; padding: 0 clamp(1rem, 3vw, 2rem); background: var(--papel); border-bottom: 1px solid var(--linha); scrollbar-width: thin; }
 .adm-abas button { flex: none; font: 500 var(--t-s) var(--sans); color: var(--tinta-2); background: none; border: 0; padding: .95rem .8rem; cursor: pointer; border-bottom: 2px solid transparent; }
@@ -70,7 +70,7 @@ table.tabela { width: 100%; border-collapse: collapse; font-size: var(--t-s); }
 .acal-mes .cab { padding: .5rem; font-size: var(--t-xs); color: var(--tinta-2); background: var(--papel); border-right: 1px solid var(--linha); border-bottom: 1px solid var(--linha); text-transform: capitalize; }
 .acal-dia { min-height: 7.5rem; padding: .4rem; border-right: 1px solid var(--linha); border-bottom: 1px solid var(--linha); font-size: var(--t-xs); min-width: 0; cursor: pointer; }
 .acal-dia:hover { background: #FAFAF6; }
-.acal-dia.fora { background: #F7F6F1; color: rgba(77,88,82,.5); }
+.acal-dia.fora { background: #F7F6F1; color: rgba(var(--t2-rgb),.5); }
 .acal-dia.hoje .num { background: var(--verde); color: #fff; }
 .acal-dia.bloq { background: repeating-linear-gradient(135deg, #fff, #fff 6px, #F3EFE6 6px, #F3EFE6 12px); }
 .acal-dia .num { display: inline-grid; place-items: center; width: 1.6rem; height: 1.6rem; border-radius: 50%; font-weight: 600; margin-bottom: .2rem; }

@@ -25,6 +25,12 @@
   "horarioAtendimento": "",
   "_horario_exemplo": "Exemplo: Segunda a sexta, das 8h às 18h",
 
+  "tema": "vinho",
+  "_tema_opcoes": "Cores do site: \"vinho\" ou \"verde\"",
+
+  "fotoHero": "",
+  "_fotoHero_exemplo": "Foto grande do topo da página inicial (horizontal, cerca de 2000×1250 px). Coloque em src/assets/img/ e informe o nome. Vazio = imagem abstrata.",
+
   "foto": "",
   "_foto_exemplo": "Coloque a foto em src/assets/img/ e informe o nome do arquivo. Exemplo: hermelany.jpg",
 

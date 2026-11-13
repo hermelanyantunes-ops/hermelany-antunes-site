@@ -5,30 +5,20 @@
   "nav": "",
   "priority": "1.0"
 }-->
-<section class="hero">
-  <div class="envoltorio">
-    <div class="hero-grade">
-      <div class="hero-texto">
-        <p class="hero-credencial">{{site.nomeCompleto}}, psicóloga ({{site.crp}}). Avaliação neuropsicológica e atendimento psicológico em {{site.cidade}} e online.</p>
-        <h1>Compreender o funcionamento cognitivo é também compreender as diferentes formas de pensar, sentir, aprender e se relacionar com o mundo.</h1>
-        <p class="hero-intro">A avaliação neuropsicológica investiga como atenção, memória, linguagem e funções executivas se organizam no dia a dia de cada pessoa, oferecendo informações consistentes para o diagnóstico e para o planejamento do cuidado.</p>
-        <div class="caminhos">
-          <a class="caminho" href="/agendar/?tipo=entrevista-inicial-avaliacao">
-            <span class="caminho-titulo">Quero realizar uma avaliação</span>
-            <span class="caminho-desc">Para você, seu filho ou um familiar. Entenda o processo e agende a entrevista inicial.</span>
-            <span class="caminho-acao">Agendar entrevista inicial</span>
-          </a>
-          <a class="caminho" href="/para-profissionais-de-saude/">
-            <span class="caminho-titulo">Sou profissional de saúde</span>
-            <span class="caminho-desc">Desejo encaminhar um paciente ou discutir uma hipótese diagnóstica.</span>
-            <span class="caminho-acao">Ver informações para encaminhamento</span>
-          </a>
-        </div>
-      </div>
-      <div class="hero-arte">
-        {{> contornos}}
-        <p class="hero-legenda"><strong>Cada pessoa tem um relevo próprio.</strong><span>A avaliação descreve habilidades preservadas e dificuldades, sem reduzir ninguém a um número.</span></p>
-      </div>
+<section class="hero" style="--hero-img:url('/assets/img/{{links.heroImg}}')">
+  <div class="envoltorio hero-conteudo">
+    <p class="hero-sobre">Avaliação neuropsicológica e atendimento psicológico</p>
+    <h1>Compreender o funcionamento cognitivo é também compreender <em>as diferentes formas de pensar, sentir, aprender e se relacionar com o mundo.</em></h1>
+    <p class="hero-intro">A avaliação neuropsicológica investiga como atenção, memória, linguagem e funções executivas se organizam no dia a dia de cada pessoa, oferecendo informações consistentes para o diagnóstico e para o planejamento do cuidado.</p>
+    <ul class="hero-temas" aria-label="Temas">
+      <li>Atenção</li><li>memória</li><li>funções executivas</li><li>aprendizagem</li>
+    </ul>
+    <ul class="selos" aria-label="Atendimento">
+      <li>Presencial em {{site.cidade}}</li><li>Online</li><li>{{site.crp}}</li>
+    </ul>
+    <div class="grupo-botoes">
+      <a class="botao botao-claro" href="/agendar/?tipo=entrevista-inicial-avaliacao">Quero realizar uma avaliação</a>
+      <a class="botao botao-contorno-claro" href="/para-profissionais-de-saude/">Sou profissional de saúde</a>
     </div>
   </div>
 </section>
