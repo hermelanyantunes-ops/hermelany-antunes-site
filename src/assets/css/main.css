@@ -607,7 +607,7 @@ strong { font-weight: 600; }
 .botao-escuro:hover { background: var(--verde-2); color: #fff; }
 
 .capa { position: relative; isolation: isolate; overflow: hidden; background: var(--verde); color: #fff; display: flex; flex-direction: column; min-height: min(46rem, calc(100svh - 5.25rem)); }
-.capa-foto { position: absolute; inset: 0; z-index: -2; background: var(--capa-larga) 100% 30% / cover; }
+.capa-foto { position: absolute; inset: 0; z-index: -2; background: var(--capa-larga) 100% 25% / cover; }
 .capa::after { content: ""; position: absolute; inset: 0; z-index: -1;
   background: linear-gradient(90deg, rgba(var(--p-rgb), .93) 0%, rgba(var(--p-rgb), .84) 34%, rgba(var(--p-rgb), .38) 56%, rgba(var(--p-rgb), 0) 74%),
               linear-gradient(to top, rgba(var(--p-rgb), .6) 0%, rgba(var(--p-rgb), 0) 30%); }
@@ -627,7 +627,7 @@ strong { font-weight: 600; }
 .moldura img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .ajuda-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
 .ajuda .moldura { aspect-ratio: 5 / 4; }
-.ajuda .moldura img { object-position: 50% 22%; }
+.ajuda .moldura img { object-position: 50% 30%; }
 .ajuda h2 { margin-bottom: 1.5rem; }
 .sanfona details { background: var(--cafe); border-radius: 10px; margin-bottom: .6rem; }
 .sanfona summary { list-style: none; cursor: pointer; position: relative; padding: 1rem 3rem 1rem 1.25rem; font-weight: 500; color: #fff; }
