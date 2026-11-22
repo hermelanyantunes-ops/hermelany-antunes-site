@@ -5,79 +5,56 @@
   "nav": "",
   "priority": "1.0"
 }-->
-<section class="hero">
-  <div class="hero-foto" style="--hero-img:url('/assets/img/{{links.heroImg}}')" role="img" aria-label="Retrato de {{site.nomeCompleto}}"></div>
-  <div class="envoltorio hero-conteudo">
-    <p class="hero-sobre">Avaliação neuropsicológica em {{site.cidade}} e online</p>
-    <h1>Compreender como cada pessoa <em>pensa, aprende e sente.</em></h1>
-    <p class="hero-intro">Um processo que investiga atenção, memória, linguagem e funções executivas, e devolve informações claras para o diagnóstico e para o cuidado.</p>
+<section class="capa" style="--capa-larga:url('/assets/img/hermelany-hero-largo.jpg');--capa-alta:url('/assets/img/{{links.heroImg}}')">
+  <div class="capa-foto" role="img" aria-label="Retrato de {{site.nomeCompleto}}"></div>
+  <div class="envoltorio capa-conteudo">
+    <p class="capa-etiqueta">Avaliação neuropsicológica em {{site.cidade}} e online</p>
+    <h1>Compreender como cada pessoa pensa, aprende e sente.</h1>
+    <p class="capa-intro">Um processo que investiga atenção, memória, linguagem e funções executivas, e devolve informações claras para o diagnóstico e para o cuidado.</p>
     <div class="grupo-botoes">
-      <a class="botao botao-claro" href="/agendar/?tipo=entrevista-inicial-avaliacao">Quero realizar uma avaliação</a>
-      <a class="botao botao-contorno-claro" href="/para-profissionais-de-saude/">Sou profissional de saúde</a>
+      <a class="botao botao-creme" href="/agendar/">Agendar horário</a>
+      <a class="botao botao-contorno-claro" href="/avaliacao-neuropsicologica/">Como funciona a avaliação</a>
     </div>
-    <ul class="selos" aria-label="Atendimento">
-      <li>Presencial em {{site.cidade}}</li><li>Online</li><li>{{site.crp}}</li>
-    </ul>
   </div>
-</section>
-
-<section class="secao" aria-labelledby="t-avaliacao">
   <div class="envoltorio">
-    <div class="cabeca-secao">
-      <h2 id="t-avaliacao">O que é a avaliação neuropsicológica</h2>
-      <div>
-        <p class="citacao">Compreender o funcionamento cognitivo é também compreender as diferentes formas de pensar, sentir, aprender e se relacionar com o mundo.</p>
-        <p>É um processo clínico que investiga as relações entre o funcionamento cerebral, a cognição, o comportamento e as emoções. Não se resume à aplicação de testes: reúne entrevistas, história de vida e de desenvolvimento, observação clínica, instrumentos padronizados e uma análise integrada dos resultados.</p>
-        <p><a href="/avaliacao-neuropsicologica/">Conheça as funções investigadas e cada etapa do processo</a></p>
-      </div>
-    </div>
-    <dl class="funcoes">
-      <div><dt>Atenção e concentração</dt><dd>Capacidade de selecionar, manter e alternar o foco.</dd></div>
-      <div><dt>Memória e aprendizagem</dt><dd>Como novas informações são registradas, retidas e evocadas.</dd></div>
-      <div><dt>Funções executivas</dt><dd>Planejamento, organização, flexibilidade e controle inibitório.</dd></div>
-      <div><dt>Linguagem</dt><dd>Compreensão, expressão, nomeação e fluência verbal.</dd></div>
-      <div><dt>Percepção e habilidades visuoespaciais</dt><dd>Organização e interpretação de informações visuais e espaciais.</dd></div>
-      <div><dt>Inteligência e raciocínio</dt><dd>Recursos para resolver problemas e estabelecer relações.</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section class="secao secao-verde" aria-labelledby="t-relatorio">
-  <div class="envoltorio relatorio-grade">
-    <div>
-      <h2 id="t-relatorio">O relatório neuropsicológico</h2>
-      <p class="lead">Mais do que um conjunto de pontuações, o relatório integra a história clínica, as observações e os resultados dos instrumentos em uma compreensão ampla do funcionamento da pessoa.</p>
-      <p><a href="/relatorio-neuropsicologico/">Entenda como o relatório é construído</a></p>
-    </div>
-    <ul class="relatorio-lista">
-      <li>Auxilia na investigação diagnóstica e no diagnóstico diferencial.</li>
-      <li>Identifica habilidades preservadas e dificuldades cognitivas.</li>
-      <li>Orienta condutas e intervenções terapêuticas.</li>
-      <li>Apoia médicos neurologistas e psiquiatras na compreensão do quadro clínico.</li>
-      <li>Fundamenta adaptações escolares e acadêmicas, quando pertinentes.</li>
-      <li>Permite acompanhar a evolução cognitiva ao longo do tempo.</li>
+    <ul class="capa-faixa">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Psicóloga, {{site.crp}}</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.6-7-11a7 7 0 0114 0c0 5.400-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Presencial em {{site.cidade}} e online</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M10 12h5M10 16h5"/></svg>Relatório técnico integrado</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9l8-4 8 4-8 4z"/><path d="M8 11.500V16c2.500 2 5.500 2 8 0v-4.500"/></svg>Pós-graduação em Neuropsicologia</li>
     </ul>
   </div>
 </section>
 
-<section class="secao" aria-labelledby="t-processo">
-  <div class="envoltorio duas-colunas">
-    <h2 id="t-processo">Como funciona o processo</h2>
+<section class="secao secao-verde ajuda" aria-labelledby="t-ajuda">
+  <div class="envoltorio ajuda-grade">
+    <figure class="moldura"><img src="/assets/img/{{site.foto}}" alt="{{site.nomeCompleto}} no consultório" width="1200" height="1597" loading="lazy"></figure>
     <div>
-      <p class="lead">São seis etapas, da entrevista inicial à entrega do relatório. O número de sessões e a duração variam conforme a demanda, a idade e as necessidades de cada pessoa, e tudo é combinado desde o primeiro encontro.</p>
-      <div class="grupo-botoes">
-        <a class="botao botao-secundario" href="/avaliacao-neuropsicologica/">Ver as etapas</a>
-        <a class="botao botao-secundario" href="/duvidas-comuns/">Dúvidas comuns</a>
+      <h2 id="t-ajuda">Como posso ajudar</h2>
+      <div class="sanfona">
+        <details open>
+          <summary>Avaliação neuropsicológica</summary>
+          <p>Investiga atenção, memória, linguagem, funções executivas e raciocínio, reunindo entrevistas, história de vida, observação clínica e instrumentos padronizados. <a href="/avaliacao-neuropsicologica/">Conheça as etapas</a></p>
+        </details>
+        <details>
+          <summary>Relatório neuropsicológico</summary>
+          <p>Integra a história clínica, as observações e os resultados em uma compreensão ampla do funcionamento da pessoa, com recomendações para o cuidado. <a href="/relatorio-neuropsicologico/">Como o relatório é construído</a></p>
+        </details>
+        <details>
+          <summary>Atendimento psicológico</summary>
+          <p>Psicoterapia com base na Terapia Cognitivo-Comportamental, presencial em {{site.cidade}} ou online. <a href="/atendimento-psicologico/">Saiba mais</a></p>
+        </details>
+        <details>
+          <summary>Para médicos e profissionais de saúde</summary>
+          <p>Descrição detalhada do perfil cognitivo, das funções preservadas e comprometidas, e diálogo com a investigação médica. <a href="/para-profissionais-de-saude/">Informações para encaminhamento</a></p>
+        </details>
       </div>
     </div>
   </div>
 </section>
 
-<section class="secao secao-bege" aria-labelledby="t-quem">
-  <div class="envoltorio duas-colunas">
-    <div>
-      {{#if site.foto}}<figure class="retrato"><img src="/assets/img/{{site.foto}}" alt="Retrato de {{site.nomeCompleto}}" width="1200" height="1597" loading="lazy"></figure>{{else}}<div class="assinatura">{{> contornos}}<p class="nome">{{site.nomeCompleto}}</p><p class="reg">{{site.profissao}} &nbsp;{{site.crp}}</p></div>{{/if}}
-    </div>
+<section class="secao secao-cafe" aria-labelledby="t-quem">
+  <div class="envoltorio sobre-grade">
     <div>
       <h2 id="t-quem">Quem sou</h2>
       <p class="lead">Sou Hermelany Antunes, psicóloga. Meu trabalho une a escuta clínica ao rigor da avaliação, sempre orientado pelo conhecimento científico e pela compreensão integral de cada pessoa.</p>
@@ -86,34 +63,32 @@
         <li><span class="curso">Especialização em Terapia Cognitivo-Comportamental</span><span class="inst">PUC-RS</span></li>
         <li><span class="curso">Pós-graduação em Neuropsicologia</span><span class="inst">INAP</span></li>
       </ul>
-      <p class="mt-15"><a href="/sobre/">Conheça minha trajetória</a></p>
+      <p class="mt-15"><a class="botao botao-creme" href="/sobre/">Conheça minha trajetória</a></p>
     </div>
+    <figure class="moldura moldura-alta"><img src="/assets/img/hermelany-retrato.jpg" alt="Retrato de {{site.nomeCompleto}}" width="880" height="1320" loading="lazy"></figure>
   </div>
 </section>
 
-<section class="secao" aria-labelledby="t-prof">
-  <div class="envoltorio duas-colunas">
-    <h2 id="t-prof">Para médicos e profissionais de saúde</h2>
-    <div>
-      <p class="lead">Psiquiatras, neurologistas, pediatras, geriatras e psicólogos podem contar com uma descrição detalhada do perfil cognitivo, das funções preservadas e comprometidas e de recomendações para o acompanhamento.</p>
-      <p>Valorizo a comunicação interdisciplinar: a avaliação neuropsicológica ganha sentido quando dialoga com a investigação médica e com o acompanhamento terapêutico.</p>
-      <div class="grupo-botoes">
-        <a class="botao botao-primario" href="{{{links.waProfissional}}}" {{{links.waAttrs}}}>Conversar sobre encaminhamentos</a>
-        <a class="botao botao-secundario" href="/para-profissionais-de-saude/">Informações para profissionais</a>
-      </div>
-    </div>
+<section class="secao" aria-labelledby="t-duvidas">
+  <div class="envoltorio">
+    <h2 id="t-duvidas" class="titulo-centro">Dúvidas de quem está começando</h2>
+    <ul class="cartoes-cafe">
+      <li><h3>Preciso de encaminhamento médico?</h3><p>Não. Você pode agendar diretamente, por iniciativa própria ou da família.</p></li>
+      <li><h3>O que levar na primeira sessão?</h3><p>Nada. Se tiver exames ou relatórios anteriores, eles ajudam, mas não são obrigatórios.</p></li>
+      <li><h3>Quanto tempo leva o relatório?</h3><p>Até 30 dias corridos após a finalização das sessões.</p></li>
+      <li><h3>Quantas sessões são?</h3><p>Varia conforme a demanda e a idade. Tudo é combinado no primeiro encontro.</p></li>
+    </ul>
+    <p class="centro"><a href="/duvidas-comuns/">Ver todas as dúvidas</a></p>
   </div>
 </section>
 
-<section class="secao secao-verde" aria-labelledby="t-agendar">
-  <div class="envoltorio chamada">
-    <div>
-      <h2 id="t-agendar">Agende seu horário</h2>
-      <p class="lead">Consulte os horários disponíveis e agende pelo site, sem precisar criar conta. Atendimento presencial em {{site.cidade}} e online.</p>
-    </div>
+<section class="secao secao-cafe fecho" aria-labelledby="t-agendar">
+  <div class="envoltorio">
+    <h2 id="t-agendar">Seu próximo passo é simples: <em>escolha um horário.</em></h2>
+    <p>A agenda mostra os horários livres, presenciais em {{site.cidade}} e online.</p>
     <div class="grupo-botoes">
-      <a class="botao botao-claro" href="/agendar/">Ver horários disponíveis</a>
-      <a class="botao botao-contorno-claro" href="{{{links.waPaciente}}}" {{{links.waAttrs}}}>{{links.canalRotulo}}</a>
+      <a class="botao botao-creme" href="/agendar/">Ver horários disponíveis</a>
+      <a class="botao botao-escuro" href="{{{links.waPaciente}}}" {{{links.waAttrs}}}>{{links.canalRotulo}}</a>
     </div>
   </div>
 </section>
