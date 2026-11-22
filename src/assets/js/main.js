@@ -27,4 +27,18 @@
     marcar();
     window.addEventListener('scroll', marcar, { passive: true });
   }
+
+  // Link direto para uma pergunta (ex.: /duvidas-comuns/#valores) abre a resposta
+  const abrirPergunta = () => {
+    if (!location.hash || location.hash.length < 2) return;
+    let alvo;
+    try { alvo = document.querySelector(location.hash); } catch { return; }
+    if (!alvo) return;
+    const det = alvo.closest('details') || (alvo.tagName === 'DETAILS' ? alvo : null);
+    if (!det) return;
+    det.open = true;
+    det.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  };
+  window.addEventListener('hashchange', abrirPergunta);
+  abrirPergunta();
 })();

@@ -466,8 +466,12 @@ strong { font-weight: 600; }
 /* ---------------------------------------------------------------------
    Seção "Por que os valores variam" (src/partials/valores.html)
    --------------------------------------------------------------------- */
-.valores .ic { width: 28px; height: 28px; flex: none; fill: none; stroke: var(--verde-3); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
-.valores-sub { font-size: var(--t-l); font-weight: 400; font-style: italic; line-height: 1.2; margin-bottom: .8em; }
+.cartao-etapa .ic, .fatores .ic { width: 28px; height: 28px; flex: none; fill: none; stroke: var(--verde-3); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.destaque-resposta { font-family: var(--serif); font-style: italic; font-size: clamp(1.3rem, 1.15rem + .6vw, 1.6rem); line-height: 1.25; color: var(--verde); margin-bottom: .7em; }
+.faq-sub { font-family: var(--sans); font-size: var(--t-s); font-weight: 600; letter-spacing: .02em; color: var(--verde); margin: 1.5rem 0 .6rem; }
+.checklist-faq li { font-size: var(--t-base); padding: .6rem 0 .6rem 2rem; }
+.checklist-faq li::before { top: 1rem; }
+.faq-pagina { margin-top: -.5rem; }
 .titulo-bloco { font-size: var(--t-l); font-weight: 400; line-height: 1.15; letter-spacing: -.012em; }
 .cabeca-secao .titulo-bloco { margin: 0; }
 [id^="ref-"], #valores { scroll-margin-top: 7rem; }
@@ -487,6 +491,9 @@ strong { font-weight: 600; }
 .onde-voce { background: var(--bege); color: var(--verde); }
 .onde-bastidor { border: 1px dashed var(--linha-forte); color: var(--tinta-2); }
 .valores-nota { margin: 1.75rem 0 0; max-width: 54rem; }
+.faq-corpo .fatores { border-bottom: 0; margin-bottom: .5rem; }
+.faq-corpo .fatores li:first-child, .faq-corpo .fatores li:nth-child(2) { border-top: 0; }
+.faq-corpo .evidencia { margin: 1.5rem 0; }
 @media (max-width: 900px) { .cartoes-etapa { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .cartoes-etapa { grid-template-columns: 1fr; } }
 
