@@ -681,3 +681,6 @@ strong { font-weight: 600; }
   .sobre-grade .moldura-alta { order: -1; max-width: 15rem; }
   .cartoes-cafe { grid-template-columns: 1fr; }
 }
+
+.funcoes-nota { margin-top: 1.5rem; max-width: 46rem; }
+.secao-bege .relatorio-lista.clara li:last-child { border-bottom-color: var(--linha); }
