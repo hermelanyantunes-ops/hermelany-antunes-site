@@ -1,7 +1,7 @@
 /* =====================================================================
    Painel administrativo
    ===================================================================== */
-body.admin { background: #F5F4EF; font-size: 1rem; }
+body.admin { background: #F3EFE7; font-size: 1rem; }
 .adm-entrada { min-height: 100svh; display: grid; place-items: center; padding: 1.5rem; background: var(--verde); }
 .adm-cartao { width: 100%; max-width: 25rem; background: var(--papel); border-radius: 10px; padding: 2.25rem 2rem; }
 .adm-cartao h1 { font-size: 1.9rem; margin-bottom: 1.5rem; }
@@ -59,25 +59,25 @@ table.tabela { width: 100%; border-collapse: collapse; font-size: var(--t-s); }
 
 /* Status */
 .st { display: inline-block; font-size: var(--t-xs); font-weight: 600; padding: .15rem .55rem; border-radius: 999px; white-space: nowrap; }
-.st-confirmado { background: #DCE8E1; color: #1E3B32; }
+.st-confirmado { background: #E4DACB; color: #2A1F19; }
 .st-pendente { background: #F2E5C9; color: #6B4E1F; }
 .st-cancelado { background: #EEE3DF; color: #8A3426; text-decoration: line-through; }
-.st-concluido { background: #E3E3DE; color: #4D5852; }
+.st-concluido { background: #E6DED2; color: #665648; }
 .st-faltou { background: #F0DCD5; color: #8A3426; }
 
 /* Calendário do painel */
 .acal-mes { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 1px solid var(--linha); border-left: 1px solid var(--linha); background: #fff; border-radius: 8px; overflow: hidden; }
 .acal-mes .cab { padding: .5rem; font-size: var(--t-xs); color: var(--tinta-2); background: var(--papel); border-right: 1px solid var(--linha); border-bottom: 1px solid var(--linha); text-transform: capitalize; }
 .acal-dia { min-height: 7.5rem; padding: .4rem; border-right: 1px solid var(--linha); border-bottom: 1px solid var(--linha); font-size: var(--t-xs); min-width: 0; cursor: pointer; }
-.acal-dia:hover { background: #FAFAF6; }
-.acal-dia.fora { background: #F7F6F1; color: rgba(var(--t2-rgb),.5); }
+.acal-dia:hover { background: #FBF8F2; }
+.acal-dia.fora { background: #F7F3EB; color: rgba(var(--t2-rgb),.5); }
 .acal-dia.hoje .num { background: var(--verde); color: #fff; }
 .acal-dia.bloq { background: repeating-linear-gradient(135deg, #fff, #fff 6px, #F3EFE6 6px, #F3EFE6 12px); }
 .acal-dia .num { display: inline-grid; place-items: center; width: 1.6rem; height: 1.6rem; border-radius: 50%; font-weight: 600; margin-bottom: .2rem; }
-.ev { display: block; width: 100%; text-align: left; border: 0; border-left: 3px solid var(--verde-3); background: #EEF3EF; color: var(--tinta); border-radius: 3px; padding: .2rem .35rem; margin-bottom: 3px; font: 500 .72rem/1.3 var(--sans); cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ev { display: block; width: 100%; text-align: left; border: 0; border-left: 3px solid var(--verde-3); background: #EFE6D9; color: var(--tinta); border-radius: 3px; padding: .2rem .35rem; margin-bottom: 3px; font: 500 .72rem/1.3 var(--sans); cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ev.pendente { border-left-color: #B48A3E; background: #F7EEDC; }
-.ev.cancelado { border-left-color: #B9A9A2; background: #F5F1EE; color: #8b817c; text-decoration: line-through; }
-.ev.concluido, .ev.faltou { border-left-color: #A3A8A3; background: #F1F1EE; }
+.ev.cancelado { border-left-color: #B5A697; background: #F4EFE8; color: #8b817c; text-decoration: line-through; }
+.ev.concluido, .ev.faltou { border-left-color: #A89C8E; background: #F2EDE4; }
 .ev.bloqueio { border-left-color: #B9A27F; background: #F3EFE6; cursor: default; }
 .ev .h { font-weight: 700; margin-right: .25rem; }
 
@@ -101,7 +101,7 @@ table.tabela { width: 100%; border-collapse: collapse; font-size: var(--t-s); }
 .dia-regra { display: grid; grid-template-columns: 8rem 1fr; gap: 1rem; padding: .8rem 1rem; background: #fff; border: 1px solid var(--linha); border-radius: 8px; align-items: start; }
 .dia-regra .nome-dia { font-weight: 600; color: var(--verde); padding-top: .2rem; }
 .chips { display: flex; flex-wrap: wrap; gap: .4rem; }
-.chip { display: inline-flex; align-items: center; gap: .4rem; background: #EEF3EF; border: 1px solid #D3E0D8; border-radius: 999px; padding: .3rem .4rem .3rem .75rem; font-size: var(--t-xs); }
+.chip { display: inline-flex; align-items: center; gap: .4rem; background: #EFE6D9; border: 1px solid #DFD2C0; border-radius: 999px; padding: .3rem .4rem .3rem .75rem; font-size: var(--t-xs); }
 .chip.inativo { opacity: .5; text-decoration: line-through; }
 .chip button { border: 0; background: none; cursor: pointer; color: var(--terra); font-size: var(--t-xs); padding: .1rem .3rem; text-decoration: underline; }
 @media (max-width: 640px) { .dia-regra { grid-template-columns: 1fr; gap: .4rem; } }
@@ -123,5 +123,5 @@ table.tabela { width: 100%; border-collapse: collapse; font-size: var(--t-s); }
 .passos-google li::before { content: counter(pg); position: absolute; left: 0; top: 0; width: 1.6rem; height: 1.6rem; border-radius: 50%; border: 1px solid var(--verde); display: grid; place-items: center; font-size: var(--t-xs); color: var(--verde); }
 .copiavel { display: flex; gap: .5rem; align-items: center; background: var(--papel); border: 1px solid var(--linha); border-radius: 6px; padding: .45rem .6rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .78rem; overflow-wrap: anywhere; margin: .35rem 0; }
 .estado-int { display: inline-flex; align-items: center; gap: .45rem; font-weight: 600; font-size: var(--t-s); }
-.estado-int::before { content: ""; width: .6rem; height: .6rem; border-radius: 50%; background: #B9A9A2; }
+.estado-int::before { content: ""; width: .6rem; height: .6rem; border-radius: 50%; background: #B5A697; }
 .estado-int.ok::before { background: #3E8A62; }

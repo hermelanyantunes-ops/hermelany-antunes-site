@@ -68,7 +68,7 @@ const wa = (texto, assunto) => temWhatsapp
 const links = {
   temWhatsapp,
   heroImg: site.fotoHero || 'hero-abstrato.jpg',
-  corTema: site.tema === 'verde' ? '#1E3B32' : '#4A1C29',
+  corTema: site.tema === 'verde' ? '#1E3B32' : '#2A1F19',
   waAttrs: temWhatsapp ? 'target="_blank" rel="noopener"' : '',
   waPaciente: wa(msg.paciente, 'Avaliação neuropsicológica'),
   waProfissional: wa(msg.profissional, 'Encaminhamento para avaliação neuropsicológica'),

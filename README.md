@@ -47,7 +47,7 @@ Edite `src/config/site.json`. Campos vazios ficam ocultos no site.
 - As mensagens iniciais do WhatsApp (paciente, profissional, atendimento) ficam em `mensagensWhatsApp`.
 
 ### Cores e foto do topo
-Em `src/config/site.json`: `"tema"` aceita `"vinho"` ou `"verde"`. `"fotoHero"` é a foto grande do topo da página inicial (horizontal, cerca de 2000×1250 px, salva em `src/assets/img/`); vazio usa a imagem abstrata.
+Em `src/config/site.json`: `"tema"` aceita `"mocha"` ou `"verde"`. `"fotoHero"` é a foto grande do topo da página inicial (horizontal, cerca de 2000×1250 px, salva em `src/assets/img/`); vazio usa a imagem abstrata.
 
 ### Foto
 Coloque a foto em `src/assets/img/` (ex.: `hermelany.jpg`, proporção 4:5, cerca de 1200×1500 px) e preencha `"foto": "hermelany.jpg"`. Sem foto, o site exibe um bloco gráfico com seu nome.

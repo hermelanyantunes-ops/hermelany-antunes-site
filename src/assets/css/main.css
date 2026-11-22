@@ -29,23 +29,23 @@
 }
 
 :root {
-  /* Paleta — tema "vinho" (padrão). O tema "verde" está logo abaixo de :root.
+  /* Paleta — tema "mocha" (padrão). O tema "verde" está logo abaixo de :root.
      Para trocar, mude "tema" em src/config/site.json. */
-  --papel: #F6F2EC;      /* off-white */
-  --bege: #EEE4DC;       /* bege rosado */
-  --areia: #DDBFB5;      /* areia rosada */
-  --verde: #4A1C29;      /* cor principal escura (vinho) */
-  --verde-2: #5F2A38;
-  --verde-3: #8C5461;
-  --tinta: #261A1D;      /* texto */
-  --tinta-2: #63545A;    /* texto secundário */
-  --terra: #8A4636;      /* links e foco */
-  --rosa: #DDA9A3;       /* destaque em itálico sobre fundo escuro */
-  --claro-sobre-verde: #F3E6DF;
-  --p-rgb: 74, 28, 41;       /* cor principal em RGB */
-  --c-rgb: 243, 230, 223;    /* claro sobre escuro em RGB */
-  --t2-rgb: 99, 84, 90;
-  --papel-rgb: 246, 242, 236;
+  --papel: #F4EEE5;      /* off-white quente */
+  --bege: #E9DFD1;       /* bege */
+  --areia: #D6C3A8;      /* areia */
+  --verde: #2A1F19;      /* cor principal escura (café profundo) */
+  --verde-2: #3D2E24;
+  --verde-3: #6B5243;
+  --tinta: #241B16;      /* texto */
+  --tinta-2: #665648;    /* texto secundário */
+  --terra: #805231;      /* links e foco */
+  --rosa: #D8B795;       /* destaque em itálico sobre fundo escuro */
+  --claro-sobre-verde: #F0E6DA;
+  --p-rgb: 42, 31, 25;       /* cor principal em RGB */
+  --c-rgb: 240, 230, 218;    /* claro sobre escuro em RGB */
+  --t2-rgb: 102, 86, 72;
+  --papel-rgb: 244, 238, 229;
   --linha: rgba(var(--p-rgb), .16);
   --linha-forte: rgba(var(--p-rgb), .32);
 
@@ -221,46 +221,71 @@ strong { font-weight: 600; }
   position: relative; isolation: isolate; overflow: hidden;
   background: var(--verde); color: var(--claro-sobre-verde);
 }
-.hero::before {
-  content: ""; position: absolute; inset: 0; z-index: -2;
-  background: var(--hero-img) center / cover no-repeat;
+.hero-foto {
+  position: absolute; right: 0; top: 0; bottom: 0; width: 48%; z-index: -2;
+  background: var(--hero-img) 50% 18% / cover;
 }
 .hero::after {
   content: ""; position: absolute; inset: 0; z-index: -1;
-  background:
-    linear-gradient(to top, rgba(var(--p-rgb), .85) 0%, rgba(var(--p-rgb), 0) 45%),
-    linear-gradient(90deg, rgba(var(--p-rgb), .96) 0%, rgba(var(--p-rgb), .86) 34%, rgba(var(--p-rgb), .5) 68%, rgba(var(--p-rgb), .28) 100%);
+  background: linear-gradient(90deg,
+    var(--verde) 0%, var(--verde) 50%,
+    rgba(var(--p-rgb), .86) 58%,
+    rgba(var(--p-rgb), .14) 76%,
+    rgba(var(--p-rgb), 0) 100%);
 }
 .hero-conteudo {
-  min-height: min(54rem, calc(100svh - 5.25rem));
+  min-height: min(50rem, calc(100svh - 5.25rem));
   display: flex; flex-direction: column; justify-content: center;
-  padding-top: clamp(3.5rem, 8vw, 6.5rem); padding-bottom: clamp(3.5rem, 7vw, 5.5rem);
+  padding-top: clamp(3rem, 7vw, 5.5rem); padding-bottom: clamp(3rem, 6vw, 5rem);
 }
 .hero-sobre {
-  display: flex; align-items: center; gap: 1.25rem; margin: 0 0 2.25rem;
-  font-size: var(--t-s); color: var(--claro-sobre-verde); max-width: none;
+  display: flex; align-items: center; gap: 1.25rem; margin: 0 0 2rem;
+  font-size: var(--t-s); color: var(--rosa); max-width: none;
 }
 .hero-sobre::before { content: ""; flex: none; width: 3.5rem; height: 1px; background: currentColor; opacity: .7; }
 .hero h1 {
   color: #fff; font-weight: 400;
-  font-size: clamp(2.15rem, 1.15rem + 3.5vw, 4.1rem);
-  line-height: 1.06; letter-spacing: -.022em;
-  margin: 0 0 2rem; max-width: 25ch; text-wrap: balance;
+  font-size: clamp(2.1rem, 1.3rem + 2.6vw, 3.4rem);
+  line-height: 1.07; letter-spacing: -.022em;
+  margin: 0 0 1.75rem; max-width: 13ch; text-wrap: balance;
 }
-.hero h1 em { display: block; font-style: italic; color: var(--rosa); }
-.hero-intro { font-size: var(--t-m); line-height: 1.55; color: var(--claro-sobre-verde); max-width: 38rem; margin: 0 0 1.5rem; }
-.hero-temas { list-style: none; display: flex; flex-wrap: wrap; gap: .25rem .7rem; margin: 0 0 2.5rem; padding: 0; color: #fff; font-weight: 500; }
-.hero-temas li + li::before { content: "•"; margin-right: .7rem; opacity: .7; }
-.selos { list-style: none; display: flex; flex-wrap: wrap; gap: .6rem; margin: 0 0 2rem; padding: 0; }
+.hero h1 em { font-style: italic; color: var(--rosa); }
+.hero-intro { font-size: var(--t-m); line-height: 1.55; color: var(--claro-sobre-verde); max-width: 27rem; margin: 0 0 2.25rem; }
+.selos { list-style: none; display: flex; flex-wrap: wrap; gap: .6rem; margin: 2rem 0 0; padding: 0; }
 .selos li {
-  font-size: .74rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: #fff;
-  padding: .6rem 1.05rem; border-radius: 999px;
-  border: 1px solid rgba(var(--c-rgb), .4); background: rgba(0, 0, 0, .22);
+  font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--rosa);
+  padding: .55rem 1rem; border-radius: 999px; border: 1px solid rgba(var(--c-rgb), .32);
 }
 @media (prefers-reduced-motion: no-preference) {
-  .hero::before { animation: hero-entrar 1.6s cubic-bezier(.2, .6, .2, 1) both; }
+  .hero-foto { animation: hero-entrar 1.4s cubic-bezier(.2, .6, .2, 1) both; }
 }
-@keyframes hero-entrar { from { opacity: 0; transform: scale(1.06); } to { opacity: 1; transform: none; } }
+@keyframes hero-entrar { from { opacity: 0; transform: scale(1.05); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 900px) {
+  .hero-foto { position: relative; width: auto; height: 46svh; min-height: 17rem; margin: 0 calc(-1 * var(--gutter)); background-position: 50% 14%; z-index: 0; }
+  .hero-foto::after { content: ""; position: absolute; inset: auto 0 0 0; height: 42%;
+    background: linear-gradient(to bottom, rgba(var(--p-rgb), 0) 0%, rgba(var(--p-rgb), .55) 55%, var(--verde) 100%); }
+  .hero::after { background: none; }
+  .hero-conteudo { min-height: 0; padding-top: 2rem; }
+  .hero-sobre { margin-bottom: 1.25rem; }
+  .hero-sobre::before { width: 2rem; }
+  .hero .grupo-botoes .botao { width: 100%; }
+}
+
+/* No topo da página inicial o cabeçalho fica dentro da área escura,
+   e volta a ser claro assim que a pessoa rola. */
+@media (min-width: 901px) {
+  body:has(.hero) .hero { margin-top: -5.25rem; }
+  body:has(.hero) .hero-conteudo { padding-top: calc(5.25rem + clamp(3rem, 7vw, 5.5rem)); }
+  body:has(.hero) .topo:not(.rolado) { background: transparent; backdrop-filter: none; }
+  body:has(.hero) .topo:not(.rolado) .marca,
+  body:has(.hero) .topo:not(.rolado) .marca-sub,
+  body:has(.hero) .topo:not(.rolado) .menu-lista a,
+  body:has(.hero) .topo:not(.rolado) .botao-secundario { color: var(--claro-sobre-verde); }
+  body:has(.hero) .topo:not(.rolado) .menu-lista a:hover { background: rgba(var(--c-rgb), .14); color: #fff; }
+  body:has(.hero) .topo:not(.rolado) .botao-secundario { border-color: rgba(var(--c-rgb), .45); }
+  body:has(.hero) .topo:not(.rolado) .botao-secundario:hover { background: rgba(var(--c-rgb), .12); color: #fff; }
+}
 
 .contornos .c { fill: none; stroke: var(--claro-sobre-verde); stroke-width: 1.1; opacity: .38; }
 .contornos .c-forte { opacity: .8; stroke-width: 1.4; }
@@ -547,6 +572,12 @@ strong { font-weight: 600; }
   .faq-item[open] .faq-corpo { animation: faq-abrir .22s ease; }
 }
 @keyframes faq-abrir { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+.faq-grupo {
+  font-family: var(--sans); font-size: .76rem; font-weight: 600; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--terra); margin: 0 0 .9rem;
+}
+.faq-pagina + .faq-grupo { margin-top: 3rem; }
 
 .ref-abre { border-top: 1px solid var(--linha-forte); }
 .ref-abre summary { font-size: 1.05rem; }
