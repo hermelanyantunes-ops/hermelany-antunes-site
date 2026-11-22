@@ -47,5 +47,8 @@
   "googleAnalyticsId": "",
   "_ga_exemplo": "Opcional. Exemplo: G-XXXXXXXXXX (ative somente depois de revisar a Política de Privacidade)",
   "googleSiteVerification": "",
-  "_gsc_exemplo": "Opcional. Código da meta tag do Google Search Console (somente o valor de content)"
+  "_gsc_exemplo": "Opcional. Código da meta tag do Google Search Console (somente o valor de content)",
+  "_doctoralia": "Endereço do perfil público na Doctoralia. A página Agendar horário mostra a agenda de lá.",
+  "doctoralia": "https://www.doctoralia.com.br/hermelany-antunes/psicologo/recife",
+  "doctoraliaId": "hermelany-antunes"
 }

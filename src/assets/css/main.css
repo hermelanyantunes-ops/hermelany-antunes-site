@@ -585,3 +585,12 @@ strong { font-weight: 600; }
 
 .mt-2 { margin-top: 2rem; }
 .mt-15 { margin-top: 1.5rem; }
+
+/* Página Agendar: bloco da Doctoralia */
+.agendar-doc { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.agendar-quadro { min-height: 12rem; }
+.agendar-quadro iframe { width: 100%; max-width: 100%; border: 0; }
+.agendar-apoio h2 { font-size: 1.2rem; margin: 0 0 .5rem; }
+.agendar-apoio h2:not(:first-child) { margin-top: 1.75rem; }
+.agendar-apoio .nota { margin-top: 1.75rem; font-size: .85rem; color: var(--tinta-2); }
+@media (max-width: 900px) { .agendar-doc { grid-template-columns: 1fr; } }
