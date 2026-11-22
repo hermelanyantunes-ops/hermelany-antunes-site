@@ -31,7 +31,7 @@
   "fotoHero": "",
   "_fotoHero_exemplo": "Foto grande do topo da página inicial (horizontal, cerca de 2000×1250 px). Coloque em src/assets/img/ e informe o nome. Vazio = imagem abstrata.",
 
-  "foto": "",
+  "foto": "hermelany.jpg",
   "_foto_exemplo": "Coloque a foto em src/assets/img/ e informe o nome do arquivo. Exemplo: hermelany.jpg",
 
   "mensagensWhatsApp": {
