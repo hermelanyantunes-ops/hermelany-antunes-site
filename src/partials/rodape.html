@@ -26,7 +26,8 @@
         <h2>Contato</h2>
         <ul>
           <li><a href="/agendar/">Agendar horário</a></li>
-          {{#if links.temWhatsapp}}<li><a href="{{{links.waGeral}}}" target="_blank" rel="noopener">WhatsApp</a></li>{{/if}}
+          {{#if links.temWhatsapp}}<li><a href="{{{links.waGeral}}}" target="_blank" rel="noopener">WhatsApp {{links.whatsappFormatado}}</a></li>{{/if}}
+          {{#if links.temAssistente}}<li><a href="{{{links.waAssistente}}}" target="_blank" rel="noopener">Assistente {{links.assistenteFormatado}}</a></li>{{/if}}
           <li><a href="mailto:{{site.email}}">{{site.email}}</a></li>
           {{#if site.instagram}}<li><a href="{{{links.instagram}}}" target="_blank" rel="noopener">Instagram @{{site.instagram}}</a></li>{{/if}}
           <li><a href="/politica-de-privacidade/">Política de privacidade</a></li>

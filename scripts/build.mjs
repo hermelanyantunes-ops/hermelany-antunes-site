@@ -60,6 +60,7 @@ function walk(dir) {
 // ---------------------------------------------------------------------
 const digits = (site.whatsapp || '').replace(/\D/g, '');
 const temWhatsapp = digits.length >= 12;
+const digitsAss = (site.whatsappAssistente || '').replace(/\D/g, '');
 const msg = site.mensagensWhatsApp || {};
 const wa = (texto, assunto) => temWhatsapp
   ? `https://wa.me/${digits}?text=${encodeURIComponent(texto)}`
@@ -76,6 +77,9 @@ const links = {
   waGeral: wa(msg.geral, 'Contato pelo site'),
   instagram: site.instagram ? `https://www.instagram.com/${site.instagram.replace(/^@/, '')}/` : '',
   whatsappFormatado: temWhatsapp ? formatPhone(digits) : '',
+  temAssistente: digitsAss.length >= 12,
+  waAssistente: digitsAss.length >= 12 ? `https://wa.me/${digitsAss}?text=${encodeURIComponent('Olá! Vim pelo site e gostaria de informações sobre agendamento.')}` : '',
+  assistenteFormatado: digitsAss.length >= 12 ? formatPhone(digitsAss) : '',
   canalRotulo: temWhatsapp ? 'Conversar pelo WhatsApp' : 'Enviar mensagem',
 };
 function formatPhone(d) {

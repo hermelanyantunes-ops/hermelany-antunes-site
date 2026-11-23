@@ -12,10 +12,12 @@
 
   "email": "hermelanyantunes@gmail.com",
 
-  "whatsapp": "",
+  "whatsapp": "5581982329577",
+  "_whatsappAssistente": "WhatsApp da assistente, para agendamentos e informações. Mesmo formato.",
+  "whatsappAssistente": "5581973196604",
   "_whatsapp_exemplo": "Somente números, com DDI 55 e DDD. Exemplo: 5581999999999",
 
-  "instagram": "",
+  "instagram": "psihermelany",
   "_instagram_exemplo": "Somente o nome de usuário, sem @. Exemplo: hermelanyantunes.psi",
 
   "enderecoPresencial": "",

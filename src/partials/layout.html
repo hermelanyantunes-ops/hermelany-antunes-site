@@ -36,7 +36,7 @@
 {{{content}}}
 </main>
 {{> rodape}}
-{{#unless page.semFlutuante}}<a class="flutuante" href="{{{links.waGeral}}}" {{{links.waAttrs}}}>{{> icone-mensagem}}<span class="rotulo">{{#if links.temWhatsapp}}WhatsApp{{else}}Fale comigo{{/if}}</span></a>{{/unless}}
+{{#unless page.semFlutuante}}<a class="flutuante" href="{{{links.waGeral}}}" {{{links.waAttrs}}}>{{#if links.temWhatsapp}}{{> icone-whatsapp}}{{else}}{{> icone-mensagem}}{{/if}}<span class="rotulo">{{#if links.temWhatsapp}}WhatsApp{{else}}Fale comigo{{/if}}</span></a>{{/unless}}
 <script src="/assets/js/config.js?v={{build.v}}"></script>
 <script src="/assets/js/main.js?v={{build.v}}" defer></script>
 {{#if page.script}}<script type="module" src="/assets/js/{{page.script}}?v={{build.v}}"></script>{{/if}}

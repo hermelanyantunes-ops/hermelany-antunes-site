@@ -185,13 +185,17 @@
     <div>
       <h2 id="t-agendar">Seu próximo passo começa com uma conversa.</h2>
       <div class="grupo-botoes">
-        <a class="botao botao-creme" href="{{{links.waPaciente}}}" {{{links.waAttrs}}}>{{links.canalRotulo}}</a>
+        <a class="botao botao-creme" href="{{{links.waPaciente}}}" {{{links.waAttrs}}}>{{> icone-whatsapp}}Falar com Hermelany</a>
         <a class="botao botao-contorno-claro" href="/agendar/">Ver horários disponíveis</a>
       </div>
+      <p class="fecho-nota">Tire dúvidas diretamente com a psicóloga.{{#if links.temAssistente}} Para agendamentos e informações, <a href="{{{links.waAssistente}}}" target="_blank" rel="noopener">fale com a assistente</a>.{{/if}}</p>
     </div>
     <dl class="atendimento">
       <div><dt>Modalidades</dt><dd>Presencial em {{site.cidade}} ({{site.uf}}) e online</dd></div>
       {{#if site.horarioAtendimento}}<div><dt>Horários</dt><dd>{{site.horarioAtendimento}}</dd></div>{{/if}}
+      {{#if links.temWhatsapp}}<div><dt>WhatsApp</dt><dd><a href="{{{links.waGeral}}}" target="_blank" rel="noopener">{{links.whatsappFormatado}}</a>, Hermelany</dd></div>{{/if}}
+      {{#if links.temAssistente}}<div><dt>Assistente</dt><dd><a href="{{{links.waAssistente}}}" target="_blank" rel="noopener">{{links.assistenteFormatado}}</a>, agendamentos</dd></div>{{/if}}
+      {{#if site.instagram}}<div><dt>Instagram</dt><dd><a href="{{{links.instagram}}}" target="_blank" rel="noopener">@{{site.instagram}}</a></dd></div>{{/if}}
       <div><dt>E-mail</dt><dd><a href="mailto:{{site.email}}">{{site.email}}</a></dd></div>
     </dl>
   </div>
