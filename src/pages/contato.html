@@ -28,7 +28,9 @@
         {{#if links.temAssistente}}<li><span class="rot">WhatsApp da assistente</span><span class="val"><a href="{{{links.waAssistente}}}" target="_blank" rel="noopener">{{links.assistenteFormatado}}</a><br><span class="nota">Para agendamentos e informações.</span></span></li>{{/if}}
         <li><span class="rot">E-mail</span><span class="val"><a href="mailto:{{site.email}}">{{site.email}}</a></span></li>
         {{#if site.instagram}}<li><span class="rot">Instagram</span><span class="val"><a href="{{{links.instagram}}}" target="_blank" rel="noopener">@{{site.instagram}}</a></span></li>{{/if}}
-        <li><span class="rot">Atendimento presencial</span><span class="val">{{#if site.enderecoPresencial}}{{site.enderecoPresencial}}{{#if site.linkMapa}}<br><a class="nota" href="{{{site.linkMapa}}}" target="_blank" rel="noopener">Ver no mapa</a>{{/if}}{{else}}{{site.cidade}} ({{site.uf}}). O endereço é informado na confirmação do agendamento.{{/if}}</span></li>
+        <li><span class="rot">Consultórios</span><span class="val">{{#if links.temEnderecos}}<ul class="enderecos">
+          {{{links.enderecosHtml}}}
+        </ul>{{else}}{{site.cidade}} ({{site.uf}}). O endereço é informado na confirmação do agendamento.{{/if}}</span></li>
         <li><span class="rot">Atendimento online</span><span class="val">Por videochamada, para pessoas em qualquer cidade.</span></li>
         {{#if site.horarioAtendimento}}<li><span class="rot">Horários</span><span class="val">{{site.horarioAtendimento}}</span></li>{{/if}}
       </ul>

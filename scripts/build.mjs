@@ -66,6 +66,19 @@ const wa = (texto, assunto) => temWhatsapp
   ? `https://wa.me/${digits}?text=${encodeURIComponent(texto)}`
   : `mailto:${site.email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(texto)}`;
 
+// Consultorios presenciais: lista para os dados estruturados e para as paginas
+const enderecos = Array.isArray(site.enderecos) ? site.enderecos.filter((e) => e && e.nome) : [];
+const enderecosHtml = enderecos
+  .map((e) => {
+    const linha2 = [e.bairro, `${site.cidade} (${site.uf})`].filter(Boolean).join(', ');
+    const mapa = e.linkMapa
+      ? ` <a class="nota" href="${esc(e.linkMapa)}" target="_blank" rel="noopener">Ver no mapa</a>`
+      : '';
+    return `<li><strong>${esc(e.nome)}</strong><br>${esc(e.complemento || '')}<br>${esc(linha2)}${e.cep ? ` &mdash; ${esc(e.cep)}` : ''}${mapa}</li>`;
+  })
+  .join('\n          ');
+const bairros = enderecos.map((e) => e.bairro).filter(Boolean);
+
 const links = {
   temWhatsapp,
   heroImg: site.fotoHero || 'hero-abstrato.jpg',
@@ -77,6 +90,9 @@ const links = {
   waGeral: wa(msg.geral, 'Contato pelo site'),
   instagram: site.instagram ? `https://www.instagram.com/${site.instagram.replace(/^@/, '')}/` : '',
   whatsappFormatado: temWhatsapp ? formatPhone(digits) : '',
+  temEnderecos: enderecos.length > 0,
+  enderecosHtml,
+  bairros: bairros.length ? bairros.join(' e ') : '',
   temAssistente: digitsAss.length >= 12,
   waAssistente: digitsAss.length >= 12 ? `https://wa.me/${digitsAss}?text=${encodeURIComponent('Olá! Vim pelo site e gostaria de informações sobre agendamento.')}` : '',
   assistenteFormatado: digitsAss.length >= 12 ? formatPhone(digitsAss) : '',
@@ -124,8 +140,16 @@ const servico = {
   email: site.email,
   ...(temWhatsapp ? { telephone: `+${digits}` } : {}),
   areaServed: [{ '@type': 'City', name: site.cidade }, { '@type': 'Country', name: 'Brasil' }],
-  address: site.enderecoPresencial
-    ? { '@type': 'PostalAddress', streetAddress: site.enderecoPresencial, addressLocality: site.cidade, addressRegion: site.uf, addressCountry: 'BR' }
+  address: enderecos.length
+    ? enderecos.map((e) => ({
+        '@type': 'PostalAddress',
+        streetAddress: [e.nome, e.complemento].filter(Boolean).join(', '),
+        addressLocality: site.cidade,
+        addressRegion: site.uf,
+        ...(e.bairro ? { addressSubLocality: e.bairro } : {}),
+        ...(e.cep ? { postalCode: e.cep } : {}),
+        addressCountry: 'BR',
+      }))
     : { '@type': 'PostalAddress', addressLocality: site.cidade, addressRegion: site.uf, addressCountry: 'BR' },
   founder: { '@id': `${site.siteUrl}/#pessoa` },
   image: `${site.siteUrl}/assets/img/compartilhar-2.jpg`,

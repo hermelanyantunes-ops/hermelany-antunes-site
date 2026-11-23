@@ -20,9 +20,23 @@
   "instagram": "psihermelany",
   "_instagram_exemplo": "Somente o nome de usuário, sem @. Exemplo: hermelanyantunes.psi",
 
-  "enderecoPresencial": "",
-  "_endereco_exemplo": "Exemplo: Rua Exemplo, 123, sala 45 — Boa Viagem, Recife/PE",
-  "linkMapa": "",
+  "_enderecos": "Consultorios presenciais. Para cada um: nome do predio, complemento (rua/numero/sala), bairro, cep e, se quiser, o link do Google Maps.",
+  "enderecos": [
+    {
+      "nome": "Empresarial Rio Mar",
+      "complemento": "Torre 1, sala 2507",
+      "bairro": "Pina",
+      "cep": "51110-150",
+      "linkMapa": ""
+    },
+    {
+      "nome": "Empresarial Melo Gouveia",
+      "complemento": "Rua Professora Anunciada da Rocha Melo, 214, 1\u00ba andar, sala 102",
+      "bairro": "Madalena",
+      "cep": "50710-390",
+      "linkMapa": ""
+    }
+  ],
 
   "horarioAtendimento": "",
   "_horario_exemplo": "Exemplo: Segunda a sexta, das 8h às 18h",
