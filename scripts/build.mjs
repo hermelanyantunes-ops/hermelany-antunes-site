@@ -124,7 +124,7 @@ const servico = {
     ? { '@type': 'PostalAddress', streetAddress: site.enderecoPresencial, addressLocality: site.cidade, addressRegion: site.uf, addressCountry: 'BR' }
     : { '@type': 'PostalAddress', addressLocality: site.cidade, addressRegion: site.uf, addressCountry: 'BR' },
   founder: { '@id': `${site.siteUrl}/#pessoa` },
-  image: `${site.siteUrl}/assets/img/og.png`,
+  image: `${site.siteUrl}/assets/img/compartilhar.jpg`,
   ...(site.horarioAtendimento ? { hoursAvailable: site.horarioAtendimento } : {}),
 };
 
