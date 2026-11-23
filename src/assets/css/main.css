@@ -684,3 +684,32 @@ strong { font-weight: 600; }
 
 .funcoes-nota { margin-top: 1.5rem; max-width: 46rem; }
 .secao-bege .relatorio-lista.clara li:last-child { border-bottom-color: var(--linha); }
+
+
+/* =====================================================================
+   Páginas internas no mesmo modelo da página inicial
+   ===================================================================== */
+.pagina-topo { background: var(--verde); color: var(--claro-sobre-verde); border-bottom: 0; position: relative; overflow: hidden; }
+.pagina-topo::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(60rem 26rem at 100% 0%, rgba(126, 94, 70, .55), rgba(126, 94, 70, 0) 70%); }
+.pagina-topo .envoltorio { position: relative; z-index: 1; }
+.pagina-topo h1 { color: #fff; font-weight: 400; }
+.pagina-topo .lead { color: var(--claro-sobre-verde); }
+.pagina-topo .migalhas, .pagina-topo .migalhas a, .pagina-topo .migalhas li { color: var(--rosa); }
+.pagina-topo .migalhas a:hover { color: #fff; }
+.pagina-topo a:not(.botao) { color: var(--creme); }
+.pagina-topo .botao-primario { background: var(--creme); color: var(--verde); }
+.pagina-topo .botao-primario:hover { background: #fff; }
+.pagina-topo .botao-secundario { color: var(--creme); border-color: rgba(var(--c-rgb), .45); }
+.pagina-topo .botao-secundario:hover { background: rgba(var(--c-rgb), .12); color: #fff; }
+.pagina-topo + .secao { border-top: 0; }
+
+.secao-verde:has(.chamada) { background: var(--cafe); color: var(--creme); }
+.secao-verde:has(.chamada) h2 { color: #fff; }
+.secao-verde:has(.chamada) p { color: var(--creme); }
+.secao-verde:has(.chamada) .botao-claro, .secao-verde:has(.chamada) .botao-primario { background: var(--creme); color: var(--verde); }
+.secao-verde:has(.chamada) .botao-secundario { color: #fff; border-color: rgba(255, 255, 255, .5); }
+
+.retrato { border-radius: 22px; }
+.cartao-etapa { border-radius: 18px; border-color: transparent; box-shadow: 0 1px 0 var(--linha); }
+.destaque-resposta { border-radius: 14px; }
