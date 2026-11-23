@@ -763,3 +763,7 @@ a:not(.botao) { transition: color .2s; }
 
 .marca-sub { white-space: nowrap; letter-spacing: .18em; }
 @media (min-width: 1181px) and (max-width: 1360px) { .menu-lista a { padding: .5rem .4rem; font-size: .72rem; letter-spacing: .06em; } .topo .botao { padding: .75rem 1rem; } .topo .envoltorio { gap: 1rem; } }
+
+@media (max-width: 420px) { .marca-nome { font-size: 1.3rem; } .marca-sub { letter-spacing: .1em; font-size: .58rem; } .menu-botao { padding: .45rem .7rem; } .topo .envoltorio { gap: .75rem; } }
+
+.rodape .marca-nome { white-space: normal; }
