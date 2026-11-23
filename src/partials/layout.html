@@ -25,7 +25,6 @@
 <link rel="preload" href="/assets/fonts/playfair.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/main.css?v={{build.v}}">
-{{#if page.agenda}}<link rel="stylesheet" href="/assets/css/agenda.css?v={{build.v}}">{{/if}}
 <script type="application/ld+json">{{{page.jsonld}}}</script>
 {{#if site.googleAnalyticsId}}<script async src="/assets/js/analytics.js?v={{build.v}}" data-ga="{{site.googleAnalyticsId}}"></script>{{/if}}
 </head>
@@ -37,7 +36,6 @@
 </main>
 {{> rodape}}
 {{#unless page.semFlutuante}}<a class="flutuante" href="{{{links.waGeral}}}" {{{links.waAttrs}}}>{{#if links.temWhatsapp}}{{> icone-whatsapp}}{{else}}{{> icone-mensagem}}{{/if}}<span class="rotulo">{{#if links.temWhatsapp}}WhatsApp{{else}}Fale comigo{{/if}}</span></a>{{/unless}}
-<script src="/assets/js/config.js?v={{build.v}}"></script>
 <script src="/assets/js/main.js?v={{build.v}}" defer></script>
 {{#if page.script}}<script type="module" src="/assets/js/{{page.script}}?v={{build.v}}"></script>{{/if}}
 </body>

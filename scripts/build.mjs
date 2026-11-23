@@ -184,15 +184,6 @@ for (const f of walk(join(SRC, 'assets'))) {
   copyFileSync(f, dest);
 }
 
-// Configuração pública para os scripts (somente dados públicos)
-const publicConfig = {
-  nome: site.nome, nomeCompleto: site.nomeCompleto, crp: site.crp, email: site.email,
-  whatsapp: temWhatsapp ? digits : '', enderecoPresencial: site.enderecoPresencial || '',
-  siteUrl: site.siteUrl, supabaseUrl: site.supabaseUrl, supabaseKey: site.supabasePublishableKey,
-  timezone: 'America/Recife',
-};
-writeFileSync(join(OUT, 'assets/js/config.js'), `window.SITE = ${JSON.stringify(publicConfig, null, 2)};\n`);
-
 // Sitemap e robots
 const hoje = new Date().toISOString().slice(0, 10);
 const indexaveis = pages.filter((p) => !p.noindex && p.path !== '/404');
@@ -201,6 +192,6 @@ writeFileSync(join(OUT, 'sitemap.xml'),
   indexaveis.map((p) => `  <url><loc>${site.siteUrl}${p.path}</loc><lastmod>${hoje}</lastmod><priority>${p.priority ?? '0.7'}</priority></url>`).join('\n') +
   `\n</urlset>\n`);
 writeFileSync(join(OUT, 'robots.txt'),
-  `User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /agendamento/\n\nSitemap: ${site.siteUrl}/sitemap.xml\n`);
+  `User-agent: *\nAllow: /\n\nSitemap: ${site.siteUrl}/sitemap.xml\n`);
 
 console.log(`✓ ${pages.length} páginas geradas em dist/ (versão ${build.v})${temWhatsapp ? '' : ' — WhatsApp ainda não configurado: botões usam e-mail'}`);
