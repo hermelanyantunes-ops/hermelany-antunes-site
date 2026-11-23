@@ -106,7 +106,7 @@ const pessoa = {
   alumniOf: [
     { '@type': 'CollegeOrUniversity', name: 'Universidade de Pernambuco (UPE)' },
     { '@type': 'CollegeOrUniversity', name: 'Pontifícia Universidade Católica do Rio Grande do Sul (PUC-RS)' },
-    { '@type': 'EducationalOrganization', name: 'Instituto de Neuropsicologia Aplicada (INAP)' },
+    { '@type': 'EducationalOrganization', name: 'INAP' },
   ],
   knowsAbout: ['Avaliação neuropsicológica', 'Neuropsicologia', 'Terapia cognitivo-comportamental', 'Psicologia clínica'],
   ...(site.instagram ? { sameAs: [links.instagram] } : {}),
