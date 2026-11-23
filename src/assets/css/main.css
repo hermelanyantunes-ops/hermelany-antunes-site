@@ -753,3 +753,13 @@ a:not(.botao) { transition: color .2s; }
 @media (max-width: 620px) { .funcoes-2 { grid-template-columns: 1fr; } .funcoes-2 > div:nth-child(2n) { padding-left: 0; border-left: 0; } }
 
 .fecho-nota { margin: 1.25rem 0 0; font-size: 1rem; color: var(--creme); max-width: 32rem; }
+
+.servicos-nota { margin: 0; padding-top: 1.5rem; border-top: 1px solid var(--linha); font-size: 1.05rem; max-width: none; }
+.pagina-topo h1 { max-width: 22ch; }
+
+.prosa .lista-filete { columns: 1; margin: 1.25rem 0 1.5rem; }
+.prosa .lista-filete li { font-size: 1.05rem; line-height: 1.6; padding: 1rem 0; }
+.prosa .lista-filete li:last-child { border-bottom: 1px solid var(--linha); }
+
+.marca-sub { white-space: nowrap; letter-spacing: .18em; }
+@media (min-width: 1181px) and (max-width: 1360px) { .menu-lista a { padding: .5rem .4rem; font-size: .72rem; letter-spacing: .06em; } .topo .botao { padding: .75rem 1rem; } .topo .envoltorio { gap: 1rem; } }
