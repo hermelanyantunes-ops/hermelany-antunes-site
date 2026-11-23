@@ -29,23 +29,23 @@
 }
 
 :root {
-  /* Paleta — tema "mocha" (padrão). O tema "verde" está logo abaixo de :root.
+  /* Paleta — neutro claro com azul discreto (padrão).
      Para trocar, mude "tema" em src/config/site.json. */
-  --papel: #F4EEE5;      /* off-white quente */
-  --bege: #E9DFD1;       /* bege */
-  --areia: #D6C3A8;      /* areia */
-  --verde: #2A1F19;      /* cor principal escura (café profundo) */
-  --verde-2: #3D2E24;
-  --verde-3: #6B5243;
-  --tinta: #241B16;      /* texto */
-  --tinta-2: #665648;    /* texto secundário */
-  --terra: #805231;      /* links e foco */
-  --rosa: #D8B795;       /* destaque em itálico sobre fundo escuro */
-  --claro-sobre-verde: #F0E6DA;
-  --p-rgb: 42, 31, 25;       /* cor principal em RGB */
-  --c-rgb: 240, 230, 218;    /* claro sobre escuro em RGB */
-  --t2-rgb: 102, 86, 72;
-  --papel-rgb: 244, 238, 229;
+  --papel: #FAFAF8;      /* branco quase puro — fundo padrão */
+  --bege: #EFEFEB;       /* neutro claro — seções alternadas */
+  --areia: #CBD6DD;      /* azul muito claro — apoio */
+  --verde: #2C3238;      /* carvão — seções escuras e elementos fortes */
+  --verde-2: #3A4148;    /* carvão mais claro — passar o mouse */
+  --verde-3: #5E676C;    /* cinza médio — ícones e superfícies */
+  --tinta: #20252A;      /* texto principal */
+  --tinta-2: #5C656C;    /* texto de apoio */
+  --terra: #3F6683;      /* azul — links, foco e destaques */
+  --rosa: #C7D6E0;       /* azul claro — destaque sobre fundo escuro */
+  --claro-sobre-verde: #F0F2F3;
+  --p-rgb: 44, 50, 56;       /* cor principal em RGB */
+  --c-rgb: 240, 242, 243;    /* claro sobre escuro em RGB */
+  --t2-rgb: 92, 101, 108;
+  --papel-rgb: 250, 250, 248;
   --linha: rgba(var(--p-rgb), .16);
   --linha-forte: rgba(var(--p-rgb), .32);
 
@@ -599,12 +599,16 @@ strong { font-weight: 600; }
 /* =====================================================================
    Página inicial: composição editorial
    ===================================================================== */
-:root { --cafe: #7E5E46; --cafe-2: #6C4F3A; --creme: #F1E4D0; --raio: 3px; }
+:root { --cafe: #5E676C; --cafe-2: #3A4148; --creme: #F0F2F3; --raio: 3px; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 [id] { scroll-margin-top: 6.5rem; }
 
-.topo { background: var(--papel); backdrop-filter: none; border-bottom-color: var(--linha); }
+.topo { background: var(--papel); backdrop-filter: none; border-bottom: 1px solid var(--linha); }
+.abre .botao-creme { background: var(--verde); color: var(--papel); }
+.abre .botao-creme:hover { background: var(--verde-2); color: #fff; }
+.abre .botao-contorno-claro { color: var(--verde); border-color: rgba(var(--p-rgb), .38); }
+.abre .botao-contorno-claro:hover { background: rgba(var(--p-rgb), .06); color: var(--verde); }
 .botao { border-radius: 2px; transition: background-color .2s, color .2s, border-color .2s; }
 .topo .botao, .abre .botao, .fecho .botao { text-transform: uppercase; letter-spacing: .09em; font-size: .78rem; font-weight: 600; }
 .botao-creme { background: var(--creme); color: var(--verde); }
@@ -614,13 +618,13 @@ html { scroll-behavior: smooth; }
 a:not(.botao) { transition: color .2s; }
 
 /* Abertura: 55% texto, 45% retrato */
-.abre { display: grid; grid-template-columns: 55fr 45fr; background: var(--verde); color: var(--creme); min-height: min(47rem, calc(100svh - 5.25rem)); }
+.abre { display: grid; grid-template-columns: 55fr 45fr; background: var(--papel); color: var(--tinta); min-height: min(47rem, calc(100svh - 5.25rem)); }
 .abre-texto { display: flex; flex-direction: column; justify-content: center;
   padding: clamp(3rem, 6vw, 5.5rem) clamp(2rem, 5vw, 5rem) clamp(3rem, 6vw, 5.5rem) max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter))); }
-.abre-id { margin: 0 0 2rem; padding-bottom: .9rem; align-self: flex-start; font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: var(--rosa); border-bottom: 1px solid rgba(var(--c-rgb), .3); max-width: none; }
-.abre h1 { color: var(--creme); font-weight: 400; font-size: clamp(2.3rem, 1.1rem + 3.3vw, 4.1rem); line-height: 1.05; letter-spacing: -.025em; margin: 0 0 1.75rem; max-width: 13ch; text-wrap: balance; }
-.abre-intro { font-size: var(--t-m); line-height: 1.55; color: var(--claro-sobre-verde); max-width: 30rem; margin: 0 0 2.25rem; }
-.abre-foto { margin: 0; position: relative; overflow: hidden; background: var(--cafe-2); }
+.abre-id { margin: 0 0 2rem; padding-bottom: .9rem; align-self: flex-start; font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: var(--terra); border-bottom: 1px solid rgba(var(--p-rgb), .22); max-width: none; }
+.abre h1 { color: var(--tinta); font-weight: 400; font-size: clamp(2.3rem, 1.1rem + 3.3vw, 4.1rem); line-height: 1.05; letter-spacing: -.025em; margin: 0 0 1.75rem; max-width: 13ch; text-wrap: balance; }
+.abre-intro { font-size: var(--t-m); line-height: 1.55; color: var(--tinta-2); max-width: 30rem; margin: 0 0 2.25rem; }
+.abre-foto { margin: 0; position: relative; overflow: hidden; background: var(--bege); }
 .abre-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
 @media (prefers-reduced-motion: no-preference) { .abre-foto img { animation: hero-entrar 1.4s cubic-bezier(.2, .6, .2, 1) both; } }
 
@@ -719,18 +723,16 @@ a:not(.botao) { transition: color .2s; }
 /* =====================================================================
    Páginas internas no mesmo modelo da página inicial
    ===================================================================== */
-.pagina-topo { background: var(--verde); color: var(--claro-sobre-verde); border-bottom: 0; position: relative; overflow: hidden; }
-.pagina-topo .envoltorio { position: relative; z-index: 1; }
-.pagina-topo h1 { color: #fff; font-weight: 400; }
-.pagina-topo .lead { color: var(--claro-sobre-verde); }
-.pagina-topo .migalhas, .pagina-topo .migalhas a, .pagina-topo .migalhas li { color: var(--rosa); }
-.pagina-topo .migalhas a:hover { color: #fff; }
-.pagina-topo a:not(.botao) { color: var(--creme); }
-.pagina-topo .botao-primario { background: var(--creme); color: var(--verde); }
-.pagina-topo .botao-primario:hover { background: #fff; }
-.pagina-topo .botao-secundario { color: var(--creme); border-color: rgba(var(--c-rgb), .45); }
-.pagina-topo .botao-secundario:hover { background: rgba(var(--c-rgb), .12); color: #fff; }
-.pagina-topo + .secao { border-top: 0; }
+.pagina-topo { background: var(--papel); color: var(--tinta); border-bottom: 1px solid var(--linha); }
+.pagina-topo h1 { color: var(--tinta); font-weight: 400; }
+.pagina-topo .lead { color: var(--tinta-2); }
+.pagina-topo .migalhas, .pagina-topo .migalhas a, .pagina-topo .migalhas li { color: var(--tinta-2); }
+.pagina-topo .migalhas a:hover { color: var(--terra); }
+.pagina-topo a:not(.botao) { color: var(--terra); }
+.pagina-topo .botao-primario { background: var(--verde); color: var(--papel); }
+.pagina-topo .botao-primario:hover { background: var(--verde-2); color: #fff; }
+.pagina-topo .botao-secundario { color: var(--verde); border-color: rgba(var(--p-rgb), .38); }
+.pagina-topo .botao-secundario:hover { background: rgba(var(--p-rgb), .06); color: var(--verde); }
 
 .secao-verde:has(.chamada) { background: var(--cafe); color: var(--creme); }
 .secao-verde:has(.chamada) h2 { color: #fff; }

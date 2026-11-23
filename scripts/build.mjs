@@ -82,7 +82,7 @@ const bairros = enderecos.map((e) => e.bairro).filter(Boolean);
 const links = {
   temWhatsapp,
   heroImg: site.fotoHero || 'hero-abstrato.jpg',
-  corTema: site.tema === 'verde' ? '#1E3B32' : '#2A1F19',
+  corTema: site.tema === 'verde' ? '#1E3B32' : '#FAFAF8',
   waAttrs: temWhatsapp ? 'target="_blank" rel="noopener"' : '',
   waPaciente: wa(msg.paciente, 'Avaliação neuropsicológica'),
   waProfissional: wa(msg.profissional, 'Encaminhamento para avaliação neuropsicológica'),
@@ -152,7 +152,7 @@ const servico = {
       }))
     : { '@type': 'PostalAddress', addressLocality: site.cidade, addressRegion: site.uf, addressCountry: 'BR' },
   founder: { '@id': `${site.siteUrl}/#pessoa` },
-  image: `${site.siteUrl}/assets/img/compartilhar-2.jpg`,
+  image: `${site.siteUrl}/assets/img/compartilhar-3.jpg`,
   ...(site.horarioAtendimento ? { hoursAvailable: site.horarioAtendimento } : {}),
 };
 
