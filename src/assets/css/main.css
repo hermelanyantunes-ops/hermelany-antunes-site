@@ -744,3 +744,10 @@ a:not(.botao) { transition: color .2s; }
 
 .menu-botao { border-radius: 2px; }
 .topo .botao, .abre .botao, .fecho .botao { font-size: .8rem; }
+
+.funcoes-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.funcoes-2 > div:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
+.funcoes-2 > div:nth-child(2n) { padding-left: 1.5rem; border-left: 1px solid var(--linha); }
+.funcoes-2 > div:nth-child(2n+1) { padding-right: 1.5rem; }
+.funcoes-2 dd { font-size: 1rem; }
+@media (max-width: 620px) { .funcoes-2 { grid-template-columns: 1fr; } .funcoes-2 > div:nth-child(2n) { padding-left: 0; border-left: 0; } }
