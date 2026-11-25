@@ -109,7 +109,7 @@ function formatPhone(d) {
 const hash = createHash('sha1');
 for (const f of walk(join(SRC, 'assets')).sort()) hash.update(readFileSync(f));
 hash.update(JSON.stringify(site));
-const build = { v: hash.digest('hex').slice(0, 10), ano: new Date().getFullYear() };
+const build = { v: hash.digest('hex').slice(0, 10), ano: new Date().getFullYear(), temMedicao: !!(site.googleAnalyticsId || site.googleAdsId) };
 
 // ---------------------------------------------------------------------
 // Dados estruturados (schema.org)

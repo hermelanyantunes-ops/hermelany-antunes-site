@@ -62,6 +62,10 @@
 
   "googleAnalyticsId": "",
   "_ga_exemplo": "Opcional. Exemplo: G-XXXXXXXXXX (ative somente depois de revisar a Política de Privacidade)",
+  "_googleAds": "Google Ads: ID da conta (AW-...) e rótulos das duas conversões (clique no WhatsApp e na agenda). Vazio = sem medição do Google Ads.",
+  "googleAdsId": "AW-10955580280",
+  "googleAdsConversaoWhatsapp": "AW-10955580280/4azXCLnVjL4dEPjGg-go",
+  "googleAdsConversaoAgenda": "AW-10955580280/hSKUCLzVjL4dEPjGg-go",
   "googleSiteVerification": "",
   "_gsc_exemplo": "Opcional. Código da meta tag do Google Search Console (somente o valor de content)",
   "_doctoralia": "Endereço do perfil público na Doctoralia. A página Agendar horário mostra a agenda de lá.",
