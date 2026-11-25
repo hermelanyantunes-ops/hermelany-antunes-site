@@ -1,0 +1,74 @@
+{
+  "_leia": "Edite os campos abaixo para atualizar os contatos do site. Campos vazios (\"\") ficam ocultos no site. Depois de salvar, publique novamente (veja o README).",
+
+  "siteUrl": "https://hermelanyantunes.com.br",
+
+  "nome": "Hermelany Antunes",
+  "nomeCompleto": "Hermelany Maria Luna Antunes",
+  "profissao": "Psicóloga & Neuropsicóloga",
+  "crp": "CRP 02/26332",
+  "cidade": "Recife",
+  "uf": "PE",
+
+  "email": "hermelanyantunes@gmail.com",
+
+  "whatsapp": "5581982329577",
+  "_whatsappAssistente": "WhatsApp da assistente, para agendamentos e informações. Mesmo formato.",
+  "whatsappAssistente": "5581973196604",
+  "_whatsapp_exemplo": "Somente números, com DDI 55 e DDD. Exemplo: 5581999999999",
+
+  "instagram": "psihermelany",
+  "_instagram_exemplo": "Somente o nome de usuário, sem @. Exemplo: hermelanyantunes.psi",
+
+  "_enderecos": "Consultorios presenciais. Para cada um: nome do predio, complemento (rua/numero/sala), bairro, cep e, se quiser, o link do Google Maps.",
+  "enderecos": [
+    {
+      "nome": "Empresarial Rio Mar",
+      "complemento": "Torre 1, sala 2507",
+      "bairro": "Pina",
+      "cep": "51110-150",
+      "linkMapa": ""
+    },
+    {
+      "nome": "Empresarial Melo Gouveia",
+      "complemento": "Rua Professora Anunciada da Rocha Melo, 214, 1\u00ba andar, sala 102",
+      "bairro": "Madalena",
+      "cep": "50710-390",
+      "linkMapa": ""
+    }
+  ],
+
+  "horarioAtendimento": "",
+  "_horario_exemplo": "Exemplo: Segunda a sexta, das 8h às 18h",
+
+  "tema": "mocha",
+  "_tema_opcoes": "Cores do site: \"mocha\" ou \"verde\"",
+
+  "fotoHero": "retrato-poltrona.jpg",
+  "_fotoHero_exemplo": "Foto grande do topo da página inicial (horizontal, cerca de 2000×1250 px). Coloque em src/assets/img/ e informe o nome. Vazio = imagem abstrata.",
+
+  "foto": "",
+  "_foto_exemplo": "Coloque a foto em src/assets/img/ e informe o nome do arquivo. Exemplo: hermelany.jpg",
+
+  "mensagensWhatsApp": {
+    "paciente": "Olá, Hermelany! Vim pelo site e gostaria de informações sobre a avaliação neuropsicológica.",
+    "profissional": "Olá, Hermelany! Sou profissional de saúde e gostaria de conversar sobre o encaminhamento de um paciente para avaliação neuropsicológica.",
+    "atendimento": "Olá, Hermelany! Vim pelo site e gostaria de informações sobre o atendimento psicológico.",
+    "geral": "Olá, Hermelany! Vim pelo site e gostaria de mais informações."
+  },
+
+  "supabaseUrl": "https://hpjnthwubydqrbdncapf.supabase.co",
+  "supabasePublishableKey": "sb_publishable_yPhTvW_i1oaIEG5WZ9Wsow_R4vCUfwh",
+
+  "googleAnalyticsId": "",
+  "_ga_exemplo": "Opcional. Exemplo: G-XXXXXXXXXX (ative somente depois de revisar a Política de Privacidade)",
+  "_googleAds": "Google Ads: ID da conta (AW-...) e rótulos das duas conversões (clique no WhatsApp e na agenda). Vazio = sem medição do Google Ads.",
+  "googleAdsId": "AW-10955580280",
+  "googleAdsConversaoWhatsapp": "AW-10955580280/4azXCLnVjL4dEPjGg-go",
+  "googleAdsConversaoAgenda": "AW-10955580280/hSKUCLzVjL4dEPjGg-go",
+  "googleSiteVerification": "texLIBFw_bjweSmAaks9cm58lqo2V8F-C-Y5YFvdnjE",
+  "_gsc_exemplo": "Opcional. Código da meta tag do Google Search Console (somente o valor de content)",
+  "_doctoralia": "Endereço do perfil público na Doctoralia. A página Agendar horário mostra a agenda de lá.",
+  "doctoralia": "https://www.doctoralia.com.br/hermelany-antunes/psicologo/recife",
+  "doctoraliaId": "hermelany-antunes"
+}
